@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products - My Ecommerce Store</title>
+    <link rel="stylesheet" href="sever.html">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f6f6f6; }
+        .products { display: flex; flex-wrap: wrap; justify-content: center; margin: 2em 0; gap: 2em; }
+    .product { background: #fff; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); margin: 0.5em; padding: 1.5em 1em; width: 220px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; animation: fadeInUp 0.8s; }
+    .product:hover { transform: translateY(-10px) scale(1.07); box-shadow: 0 16px 32px rgba(67,233,123,0.18); }
+    .product img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; margin-bottom: 1em; box-shadow: 0 2px 8px rgba(0,0,0,0.07); transition: box-shadow 0.3s, transform 0.3s; }
+    .product:hover img { box-shadow: 0 8px 24px #43e97b44; transform: scale(1.08); }
+    .product h4 { margin: 0.5em 0; font-size: 1.2em; color: #222; animation: fadeInUp 1.2s; }
+        .product p { color: #fda085; font-weight: bold; margin-bottom: 1em; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="sever.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+    </nav>
+    <div style="max-width:900px;margin:2em auto 0 auto;">
+        <div style="background:#fff3e0;padding:1em 2em;border-radius:12px;margin-bottom:2em;text-align:center;box-shadow:0 2px 8px rgba(253,160,133,0.12);">
+            <h2 style="color:#fda085;">Big Sale! Up to 50% Off on Select Products</h2>
+            <p>Use code <b>SALE50</b> at checkout. Limited time only!</p>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1em;">
+            <span style="font-size:1.2em;font-weight:bold;">All Products</span>
+            <select id="sortSelect" style="padding:0.5em;border-radius:6px;border:1px solid #ccc;">
+                <option value="default">Sort By</option>
+                <option value="priceLow">Price: Low to High</option>
+                <option value="priceHigh">Price: High to Low</option>
+            </select>
+        </div>
+        <div class="products" id="products"></div>
+    </div>
+    <script src="j.js"></script>
+    <script>
+        renderProducts();
+        document.getElementById('sortSelect').onchange = function() {
+            renderProducts();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLife Pharmacy - Your Trusted Medical Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x1080') no-repeat center center/cover;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .shake:hover {
+            animation: shake 0.5s;
+        }
+        
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-green-800 text-white py-2 px-4 text-sm hidden md:block fade-in">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex space-x-4">
+                <span><i class="fas fa-phone-alt mr-1"></i> +91 98765 43210</span>
+                <span><i class="fas fa-envelope mr-1"></i> info@greenlifepharmacy.com</span>
+                <span><i class="fas fa-map-marker-alt mr-1"></i> 123 Health Street, Green City - 560001</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-green-300 transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-green-300 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-green-300 transition"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 slide-in-left">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50" alt="GreenLife Pharmacy Logo - green cross with leaf icon" class="h-12 w-12 shake">
+                <span class="text-xl font-bold text-green-800">Green<span class="text-green-600">Life</span></span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-green-800 font-medium hover:text-green-600 transition">Home</a>
+                <a href="#about" class="text-gray-700 font-medium hover:text-green-600 transition">About</a>
+                <a href="#services" class="text-gray-700 font-medium hover:text-green-600 transition">Services</a>
+                <a href="#products" class="text-gray-700 font-medium hover:text-green-600 transition">Products</a>
+                <a href="#contact" class="text-gray-700 font-medium hover:text-green-600 transition">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-white py-20 md:py-32 floating">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-aos="fade-down">Your Health, Our Priority</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Quality medicines and healthcare services with care and professionalism</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white py-3 px-8 rounded-lg font-medium transition duration-300 transform hover:scale-105">Contact Us</a>
+                <a href="#products" class="bg-white hover:bg-gray-100 text-green-800 py-3 px-8 rounded-lg font-medium transition duration-300 transform hover:scale-105">Our Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Why Choose GreenLife?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-green-50 rounded-lg shadow-md p-6 text-center card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 pulse-animation">
+                        <i class="fas fa-pills text-green-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Genuine Medicines</h3>
+                    <p class="text-gray-600">We source only from trusted manufacturers ensuring 100% genuine medications.</p>
+                </div>
+                
+                <div class="bg-green-50 rounded-lg shadow-md p-6 text-center card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 pulse-animation">
+                        <i class="fas fa-user-md text-green-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Expert Pharmacists</h3>
+                    <p class="text-gray-600">Our qualified team provides personalized consultation and guidance.</p>
+                </div>
+                
+                <div class="bg-green-50 rounded-lg shadow-md p-6 text-center card-hover" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 pulse-animation">
+                        <i class="fas fa-truck text-green-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Fast Delivery</h3>
+                    <p class="text-gray-600">Quick home delivery with proper handling of your medications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8" data-aos="fade-right">
+                    <img src="https://placehold.co/600x400" alt="Modern pharmacy interior with green accents and well-organized shelves" class="rounded-lg shadow-md w-full">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-4 text-green-800">About GreenLife Pharmacy</h2>
+                    <p class="text-gray-600 mb-6">Since 2010, GreenLife Pharmacy has been committed to providing exceptional healthcare services to our community. Our green-themed store reflects our commitment to health and sustainability.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-green-200 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-green-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Certified Professionals</h4>
+                                <p class="text-gray-600">All our pharmacists are licensed and regularly trained.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-200 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-green-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Wide Product Range</h4>
+                                <p class="text-gray-600">From OTC medicines to specialty drugs and wellness products.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-200 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-green-800"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Eco-Friendly Practices</h4>
+                                <p class="text-gray-600">We follow sustainable practices in our operations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-8 bg-green-700 hover:bg-green-800 text-white py-2 px-6 rounded-lg font-medium transition duration-300 transform hover:scale-105">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4" data-aos="fade-up">Our Services</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">Comprehensive healthcare services for all your needs</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-green-50 rounded-lg shadow-sm p-6 card-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="bg-green-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-prescription-bottle-alt text-green-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Prescription Filling</h3>
+                    <p class="text-gray-600">Accurate dispensing of medications with clear instructions.</p>
+                </div>
+                
+                <div class="bg-green-50 rounded-lg shadow-sm p-6 card-hover" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="bg-green-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-heartbeat text-green-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Health Screenings</h3>
+                    <p class="text-gray-600">BP, glucose, cholesterol and basic health checkups.</p>
+                </div>
+                
+                <div class="bg-green-50 rounded-lg shadow-sm p-6 card-hover" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="bg-green-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-green-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Home Delivery</h3>
+                    <p class="text-gray-600">Convenient delivery of medications to your doorstep.</p>
+                </div>
+                
+                <div class="bg-green-50 rounded-lg shadow-sm p-6 card-hover" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="bg-green-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-comment-medical text-green-800 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Medication Reviews</h3>
+                    <p class="text-gray-600">Personalized medication management and counseling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4" data-aos="fade-up">Featured Products</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">Quality healthcare products for your wellness</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg card-hover" data-aos="flip-left">
+                    <div class="relative">
+                        <img src="https://placehold.co/400x300" alt="Pack of pain relief tablets with green packaging" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded">BESTSELLER</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1 text-gray-800">Pain Relief Tablets</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="text-gray-500 text-sm ml-2">(42)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold">₹249.00</span>
+                            <span class="text-gray-400 text-sm line-through">₹299.00</span>
+                        </div>
+                        <button class="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-medium transition duration-300 transform hover:scale-105">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg card-hover" data-aos="flip-left" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="https://placehold.co/400x300" alt="Multivitamin supplement bottles with green labels" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1 text-gray-800">Multivitamin Capsules</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span class="text-gray-500 text-sm ml-2">(36)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold">₹399.00</span>
+                        </div>
+                        <button class="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-medium transition duration-300 transform hover:scale-105">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg card-hover" data-aos="flip-left" data-aos-delay="400">
+                    <div class="relative">
+                        <img src="https://placehold.co/400x300" alt="Vitamin D supplements with eco-friendly packaging" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">NEW</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1 text-gray-800">Vitamin D Supplements</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="text-gray-500 text-sm ml-2">(28)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold">₹549.00</span>
+                        </div>
+                        <button class="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-medium transition duration-300 transform hover:scale-105">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg card-hover" data-aos="flip-left" data-aos-delay="600">
+                    <div class="relative">
+                        <img src="https://placehold.co/400x300" alt="Cold and flu relief syrup with natural ingredients" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1 text-gray-800">Cold Relief Syrup</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                            <span class="text-gray-500 text-sm ml-2">(19)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold">₹189.00</span>
+                        </div>
+                        <button class="mt-4 w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-medium transition duration-300 transform hover:scale-105">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white py-2 px-6 rounded-lg font-medium transition duration-300 transform hover:scale-105">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-green-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-6" data-aos="fade-up">What Our Customers Say</h2>
+            <p class="text-center text-green-200 max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">Hear from our satisfied customers about their experiences</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex mb-4">
+                        <img src="https://placehold.co/80x80" alt="Portrait of satisfied middle-aged male customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Rajesh Kumar</h4>
+                            <div class="flex text-yellow-300 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-green-100">"The pharmacists at GreenLife helped me understand my medication thoroughly. Their home delivery service is a lifesaver for my elderly parents."</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex mb-4">
+                        <img src="https://placehold.co/80x80" alt="Portrait of happy young female customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Priya Patel</h4>
+                            <div class="flex text-yellow-300 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-green-100">"Always fresh stock and genuine medicines. Their prices are reasonable compared to other pharmacies in the area. Highly recommended!"</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex mb-4">
+                        <img src="https://placehold.co/80x80" alt="Portrait of elderly female customer" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold">Suman Devi</h4>
+                            <div class="flex text-yellow-300 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-green-100">"I love the home delivery service. The staff is very polite and delivers medicines on time. The green theme of the store is very soothing too."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">Contact Us</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <div class="bg-green-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-green-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Address</h4>
+                                    <p class="text-gray-600">123 Health Street, Green City - 560001</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-green-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">+91 98765 43210</p>
+                                    <p class="text-gray-600">080-23456789</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-green-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@greenlifepharmacy.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-clock text-green-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Opening Hours</h4>
+                                    <p class="text-gray-600">Monday - Saturday: 8:00 AM - 10:00 PM</p>
+                                    <p class="text-gray-600">Sunday: 9:00 AM - 9:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="bg-green-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-semibold mb-4 text-gray-800">Send Us a Message</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md font-medium transition duration-300 transform hover:scale-105">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-64 md:h-80 bg-gray-200">
+        <!-- Map placeholder - replace with actual map embed -->
+        <div class="h-full flex items-center justify-center bg-gray-300">
+            <p class="text-gray-600">Your store's Google Map will appear here</p>
+            <!-- Actual Google Map Embed Code would go here -->
+            <!-- <iframe src="https://www.google.com/maps/embed?..."></iframe> -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="https://placehold.co/40x40" alt="GreenLife Pharmacy Logo - small version" class="h-10 w-10">
+                        <span class="text-xl font-bold">Green<span class="text-green-300">Life</span></span>
+                    </div>
+                    <p class="text-green-200 text-sm max-w-xs">Committed to your health and wellness since 2010</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-green-200 hover:text-white text-sm transition">Home</a></li>
+                            <li><a href="#about" class="text-green-200 hover:text-white text-sm transition">About Us</a></li>
+                            <li><a href="#services" class="text-green-200 hover:text-white text-sm transition">Services</a></li>
+                            <li><a href="#products" class="text-green-200 hover:text-white text-sm transition">Products</a></li>
+                            <li><a href="#contact" class="text-green-200 hover:text-white text-sm transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-green-200 hover:text-white text-sm transition">Prescriptions</a></li>
+                            <li><a href="#" class="text-green-200 hover:text-white text-sm transition">Health Checks</a></li>
+                            <li><a href="#" class="text-green-200 hover:text-white text-sm transition">Home Delivery</a></li>
+                            <li><a href="#" class="text-green-200 hover:text-white text-sm transition">Consultations</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                        <div class="flex space-x-4 mb-4">
+                            <a href="#" class="text-green-200 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-green-200 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-green-200 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-green-200 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <p class="text-green-200 text-sm">Subscribe for health tips and offers</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-800 mt-8 pt-6 text-center text-green-200 text-sm">
+                <p>© 2023 GreenLife Pharmacy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-6 right-6 z-50" data-aos="zoom-in" data-aos-delay="1000">
+        <a href="https://wa.me/919876543210" target="_blank" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 pulse-animation">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
