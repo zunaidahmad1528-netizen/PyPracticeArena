@@ -67,3 +67,67 @@ def cul_prod(a,b):
     return a * b
 
 cul_prod()
+def cul_prod(a = 1, b = 1):
+    print(a*b)
+    return a * b
+cul_prod()
+
+def cul_prod(a,b=2):
+    print(a*b)
+    return a * b
+cul_prod(1)
+
+def cul_prod(b,a=3):
+    print(a*b)
+    return a * b
+cul_prod(1)
+
+questions
+
+
+def cul_lenght(str):
+    lenght = len(str)
+    print(lenght)
+    return lenght 
+
+cul_lenght("mohd zunaid")
+
+cities = ["delhi" , "agra", "lucknow", "mumbai", "banglore"]
+heroes = ["shaktiman" , "nagraj", "batman", "supermen" , "ironmen"]
+
+def print_lenght(list):
+    print(len(list))
+    return len(list)
+
+print_lenght(cities)
+print_lenght(heroes)
+
+def print_lenght(list):
+    print(len(list))
+    return len(list)
+
+print_lenght("mohd")
+print_lenght("zunaid")
+print_lenght("mohdzunaid")
+print_lenght("mohdzunaid1234")
+print_lenght("mohd zunaid")
+
+print(heroes[0], end=" ")
+print(heroes[1], end=" ")
+def print_list(list):
+    for i in list:
+        print(i, end=" ")
+        
+print_list(heroes)
+
+n = 5
+    
+def find_fact(a,b):
+    
+def print_function():
+    print("hello world ")
+    return print
+print_function()
+print_function()
+print_function()
+print_function()
