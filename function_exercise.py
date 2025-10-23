@@ -234,3 +234,79 @@ def even_odd(n):
         return n
 even_odd(3)
 
+recursion function
+n = 5
+def show(n):
+    # if (n==0): # base condition
+    #     return
+    print(n)
+    show(n-1)# work
+    
+show(5)
+
+n = 5
+def show(n):
+    if (n==0):
+        return
+    print(n)
+    show(n-1)
+show(5)
+
+ recurstion function for factorial
+
+def factorial(n):
+    if ((n == 0) or (n == 1)):
+        return 1
+    else:
+        fact = n * factorial(n-1)
+        print(fact)
+        return fact
+    
+factorial(6)
+
+
+def cal_sumofn(n):
+    if n == 0:
+        return 0
+    else:
+        sum = n + cal_sumofn(n-1)
+        print(sum)
+        return sum
+cal_sumofn(5)
+
+
+def nsum(n):
+    if n == 0:
+        return 0
+    else:
+        return n + nsum(n-1) 
+    print(n)
+nsum(5)
+
+def calc_sum(n):
+    if n == 0:
+        return 0
+    else:
+        return calc_sum(n-1) + n
+    
+sum = calc_sum(5)
+print(sum)
+
+list = [1,2,3,4,5]
+def print_list(list):
+    if len(list) == 0:
+        return
+    else:
+        print(list)
+        
+print_list(list)
+
+def print_list(list,inx = 0):
+    if (inx == len(list)):
+        return
+    
+    print(list[inx])
+    print_list(list, inx + 1)
+li = [1,2,3,4,5]
+    
+print_list(li)
