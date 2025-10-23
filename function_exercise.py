@@ -131,3 +131,106 @@ print_function()
 print_function()
 print_function()
 print_function()
+
+def print_name(name):
+    print(f"hello, {name}")
+    
+print_name("mohd zunaid")
+def geet_user(name):
+    print(f"hello, {name}")
+    
+geet_user("mohd zunaid")
+
+def find_squre(n):
+    for i in range(1,n+1):
+        print(f"sqare of {i} is {i*i}")
+        
+find_squre(10)
+
+def find_square(n):
+    print(n*n)
+find_square(5)
+
+def find_evenorodd(n):
+    if n%2==0:
+        print("even")
+    else:
+        print("odd")
+        return n
+find_evenorodd(3)
+
+list = [1,2,3,4,5,6,7,8,9,10]
+
+def sum_of_list(list):
+    print(sum(list))
+    
+sum_of_list(list)
+
+def find_max(list):
+    print(max(list))
+    
+find_max(list)
+
+def find_maxofthree(a,b,c):
+    if a >= b and a >= c:
+        print(a)
+    elif b >= a and b >= c:
+        print(b)
+    else:
+        print(c)
+        return a,b,c
+find_maxofthree(3,7,2)
+
+def reverse_string(str):
+    print(str[::-1])
+    return str 
+
+reverse_string("mohd zunaid")
+
+def find_factorial(n):
+    fact = 1
+    for i  in range(1,n+1):
+     fact *= i
+    print(fact)
+    
+find_factorial(5)
+    
+    
+def is_palindrome(str):
+    if str == str[::-1]:
+        print("palindrome")
+        
+    else:
+        print("not palindrome")
+        
+    return str
+is_palindrome("madam")
+
+def find_fact(n):
+    fact = 1
+    for i in range (1,n+1):
+        fact *= i
+    print(fact)
+    
+    
+find_fact(5)
+
+def find_inr(USD):
+    INR = USD * 83
+    print(USD, "doller is equal to", INR, "INR")
+    
+    
+find_inr(100)
+
+
+str1 = "EVEN"
+str2 = "ODD"
+
+def even_odd(n):
+    if n%2==0:
+        print(str1)
+    else:
+        print(str2)
+        return n
+even_odd(3)
+
