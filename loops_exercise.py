@@ -51,3 +51,13 @@ while ind < len(heros):
     else:
         print("findind...")
     ind += 1
+    num  = [1,2,3,4,5,6,7,8,9,10]
+x =  4
+inx = 0
+while inx < len(num):
+    if (num[inx] == x):
+        print("found")
+        break    
+    else:
+#         print("not found")
+        inx += 1 
