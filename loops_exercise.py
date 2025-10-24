@@ -61,3 +61,41 @@ while inx < len(num):
     else:
 #         print("not found")
         inx += 1 
+        
+i = 0 
+while i <= 5:
+        if (i == 3):
+         i +=1
+         continue
+        print(i)
+        i += 1
+break
+
+for i in range(34):
+        if (i==30):
+         break
+        print(i)
+        
+        
+# continue 
+for  i in range(12):
+        if i==0:
+                continue
+#         print(i)
+i = 0
+while i <= 12:
+        i += 1
+        if i==6:
+                continue
+        elif i==8:
+                continue
+        
+        if i==11:
+                break
+        print(i)  
+
+# for loop 
+for i in range(10):
+        print(i)
+for i in range(1,11):
+        print(i)
