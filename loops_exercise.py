@@ -99,3 +99,67 @@ for i in range(10):
         print(i)
 for i in range(1,11):
         print(i)
+        
+for i in range(1,21,2):
+        print(i)
+
+# with python 
+
+fuirt = ["apple", "banana", "mango", "grapes"]
+for i in fuirt:
+        print(i)
+
+# with string
+name  = "mohd zunaid"
+print(len(name))
+for i in name:
+        print(i)
+       
+       
+colour = ["red", "green", "blue", "yellow"]
+for index, i in  enumerate(colour):
+        print(index, i)
+
+for i in range(1, 11):
+        for j in range(1,11):
+                print(i, j)
+       
+         whike loop 
+i = 0
+while i< 5:
+        i += 1
+        print(i)
+
+i = 2 
+while i <=10:
+        print(i)
+        i += 2
+else:
+        print("loop is ended")
+        
+        for i in range(1,11):
+                if i==5:
+                 continue 
+                elif i ==6:
+                        continue
+                if i==9:
+                        break
+                
+        print(i)
+
+
+str = "mohdzunaid"
+for i in str:
+         if (i=='i'):
+                 break
+         print(i)
+         
+print("END loop")
+
+str = "mohdzunaid"
+for i in str:
+         if (i=='i'):
+                continue
+         print(i)
+         
+print("END loop")
