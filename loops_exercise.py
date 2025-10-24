@@ -163,3 +163,88 @@ for i in str:
          print(i)
          
 print("END loop")
+# pratice question
+
+ 
+# list = [1,4,9,16,25,36,49,64,81,100]
+# for i in list:
+#         if
+
+# i = 0
+# while i<10:
+#         i +=1
+#         print(i*i)
+# list = []
+# print(list)
+        
+        
+list = [1,4,9,16,25,36,49,64,81,100]
+x = int(input("enter A number :"))
+for i in list:
+        if (i==x):
+                print("found x here" )
+                continue
+        print(i)
+        
+list = [1,4,9,16,25,36,49,64,81,100]
+x = int(input("enter A number :"))
+for i in list:
+        if (i==x):
+                print("found x here")
+                break
+        print(i)
+
+for i in range(1,101):
+        print(i)
+        
+        
+for i in range(101,0, -1):
+        print(i)
+
+n = int(input("enter a number ;"))
+for i in range (1,11,1):
+        print(i*n)
+
+
+for i in range(5):
+        pass
+if i==3:
+        pass
+        
+        
+# print("some important code")
+
+
+# n = int(input("enter a number :"))
+# sum = 0
+# for i in range(1,n+1):
+#         sum += i
+#         print(sum)
+       
+n = int(input("enter a number :"))  
+sum = 0 
+i = 1
+
+while i <= n:
+        i += 1
+        sum += i 
+        print(sum)
+         
+         
+         
+         
+n = 5
+fac = 1
+i = 1
+
+while i <= n:
+        i += 1
+        fac *= i 
+       
+        print(fac)
+
+fac = 1
+n = int(input("enter a number :"))
+for i in range(1,n+1):
+        fac *= i 
+        print(fac)
