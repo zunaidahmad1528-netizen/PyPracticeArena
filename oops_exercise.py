@@ -87,3 +87,42 @@ class Student:
     marks = 97
     age = 19
     
+s1 = Student()
+s2 = Student()
+print(s1.name , s1.marks , s1.age)
+print(s2.name , s2.marks , s2.age)
+class Student:
+    # default constructor
+    def __init__(self):
+    
+    
+    # parameterized constructor
+     def __init__(self, name , marks , age ):
+        self.name = name
+        self.marks = marks
+        self.age = age
+        print("student data added successfully")
+        
+s1 = Student("mohd zunaid" , 85 , 19)
+print(s1.name , s1.age , s1.marks)
+
+s2 = Student("mohd rihan" , 89 , 19)
+print(s2.name , s2.age , s2.marks)
+class Office:
+     company = "ABC Pvt Ltd"
+     def __init__(self, emp_name, emp_id, emp_salary, emp_experence):
+       
+        self.emp_name = emp_name
+        self.emp_id = emp_id
+        self.emp_salary = emp_salary
+        self.emp_experence = emp_experence
+        
+        
+emp1 = Office("Mohd zunaid", "A101", 50000, "2 years")
+emp2 = Office("Mohd rihan", "A102", 60000, "3 years")
+emp3 = Office("Mohd asad", "A103", 55000, "2.5 years")
+print(emp1.emp_name, emp1.emp_id, emp1.emp_salary, emp1.emp_experence, emp1.company)
+print(emp2.emp_name, emp2.emp_id, emp2.emp_salary, emp2.emp_experence, emp2.company)
+print(emp3.emp_name, emp3.emp_id, emp3.emp_salary, emp3.emp_experence, emp3.company)
+print("Employee data added successfully")
+
