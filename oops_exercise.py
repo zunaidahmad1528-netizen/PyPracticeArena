@@ -135,3 +135,17 @@ class Student:
 s1 = Student("Rahul", 20)
 
 print("Name:", s1.name)
+
+
+# Question: Create a class Car with a method that displays car details.
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    
+    def show(self):
+        print("Brand:", self.brand)
+        print("Model:", self.model)
+
+c1 = Car("Toyota", "Fortuner")
+c1.show()
