@@ -126,3 +126,12 @@ print(emp2.emp_name, emp2.emp_id, emp2.emp_salary, emp2.emp_experence, emp2.comp
 print(emp3.emp_name, emp3.emp_id, emp3.emp_salary, emp3.emp_experence, emp3.company)
 print("Employee data added successfully")
 
+# Question: Create a class Student with attributes and print them using an object.
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+s1 = Student("Rahul", 20)
+
+print("Name:", s1.name)
