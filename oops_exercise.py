@@ -174,4 +174,27 @@ s1.data()
 s2.data()
 print(s1.getmarks())
 print(s2.getmarks())
+
+       
+class Student:
+    def __init__(self, name, physics, chemistry, math):
+      self.name = name
+      self.physics = physics
+      self.chemistry = chemistry
+      self.math = math
+    
+    def student_info(self):
+        return (self.name, self.physics, self.chemistry, self.math)
+        
+    
+    def average_marks(self):
+        return (self.physics + self.chemistry + self.math)/3
+    
+      
+      
+      
+s1 = Student("zunaid", 97, 95, 98)
+print(s1.name, s1.physics, s1.chemistry, s1.math)
+print("Student Info:", s1.student_info())
+print("Average Marks:", s1.average_marks()) 
         
