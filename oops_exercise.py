@@ -149,3 +149,29 @@ class Car:
 
 c1 = Car("Toyota", "Fortuner")
 c1.show()
+
+
+
+class Student:
+    school = "XYZ high school"
+    def __init__(self, name, marks, age):
+        self.name = name
+        self.marks = marks
+        self.age = age
+        print("Student data added successfully")
+    
+    def data(self):
+        print("Student Name:", self.name , self.marks , self.age , self.school)
+    def getmarks(self):
+        return self.marks
+        
+s1 = Student("Mohd zunaid", 97, 19)
+print(s1.name, s1.marks, s1.age, s1.school)
+s2 = Student("Mohd rihan", 89,19)
+print(s2.name, s2.marks, s2.age, s2.school)
+
+s1.data()
+s2.data()
+print(s1.getmarks())
+print(s2.getmarks())
+        
