@@ -197,4 +197,32 @@ s1 = Student("zunaid", 97, 95, 98)
 print(s1.name, s1.physics, s1.chemistry, s1.math)
 print("Student Info:", s1.student_info())
 print("Average Marks:", s1.average_marks()) 
+
+
+# static methods 
+# methods that dont use self parameter (work at class level)
+# so we use @staticmethod decorator to define static methods
+
+class Student:
+    school = "XYZschool"
+    
+    def __init__(self, name, marks):
+      self.name = name
+      self.marks = marks
+    
+    
+    @staticmethod
+    
+    def hello():
+      print("hello")
+    
+      
+      
+s1 = Student("zunaid",97)
+print(s1.name, s1.marks, s1.school)
+
+s1.hello()
+
+
+        
         
