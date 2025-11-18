@@ -241,4 +241,8 @@ class Car:
 car1 = Car()
 car1.start()
         
-        
+
+# Encapsulation
+# wrapping data and functions into a single unit(object).
+
+
