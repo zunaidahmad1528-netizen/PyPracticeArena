@@ -246,24 +246,50 @@
 # wrapping data and functions into a single unit(object).
 
 
-class Account:
-    def __init__(self, balance, account_number):
-        self.balance = balance
-        self.account_number = account_number
+# class Account:
+#     def __init__(self, balance, account_number):
+#         self.balance = balance
+# #         self.account_number = account_number
         
-        # debit method
-    def debit(self, account):
-        self.balance -= account
-        print("Rs.", account, "debited from your account.")
-        print("Your current balance is:" , self.balance)
-        # credit method
-    def credit(self, account):
-        self.balance += account
-        print("Rs.", Account, "credited to your account..")
-        print("Your current balance is:" , self.balance)
+#         # debit method
+#     def debit(self, account):
+#         self.balance -= account
+#         print("Rs.", account, "debited from your account.")
+#         print("Your current balance is:" , self.balance)
+#         # credit method
+#     def credit(self, account):
+#         self.balance += account
+#         print("Rs.", Account, "credited to your account..")
+#         print("Your current balance is:" , self.balance)
         
-acc1 = Account(50000, 2463265772002)
-print(acc1.balance, acc1.account_number)
-acc1.debit(5000)
-acc1.credit(10)
+# acc1 = Account(50000, 2463265772002)
+# print(acc1.balance, acc1.account_number)
+# acc1.debit(5000)
+# acc1.credit(10)
         
+        
+# a, b = input("Enter two numbers: ").split()
+# a = int(a)
+# # b = int(b)
+# print("Python", "Java", "C++", sep=" | ")
+# name = "Bob"
+# age = 30
+# print(f"{name} is {age} years old")
+# print(f"Next year: {age + 1}")
+
+# name = "Bob"
+# age = 30
+# print("{} is {} years old".format(name, age))
+# name = "Bob"
+# age = 30
+# print("%s is %d years old" % (name, age))
+# name = input("Enter your name: ")
+# age = int(input("Enter your age: "))
+# salary = float(input("Enter your salary: "))
+
+# Display output
+print("\n--- User Info ---")
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Salary: ${salary:.2f}")
+print(f"Next year you'll be {age + 1} years old")
