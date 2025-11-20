@@ -288,8 +288,25 @@
 # salary = float(input("Enter your salary: "))
 
 # Display output
-print("\n--- User Info ---")
-print(f"Name: {name}")
-print(f"Age: {age}")
-print(f"Salary: ${salary:.2f}")
-print(f"Next year you'll be {age + 1} years old")
+# print("\n--- User Info ---")
+# print(f"Name: {name}")
+# print(f"Age: {age}")
+# print(f"Salary: ${salary:.2f}")
+# print(f"Next year you'll be {age + 1} years old")
+
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+# s1 = Student("zunaid")
+# print(s1.name)
+# del s1.name
+# # print(s1.name)
+
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+# s1 = Student("zunaid")
+# del s1
+# print(s1)
+
+
