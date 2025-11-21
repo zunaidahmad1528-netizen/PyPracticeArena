@@ -320,13 +320,35 @@
 # print(acc1.account_number)
 # print(acc1.reset_password())
 
-class Person:
-    __name = "anonymous"
+# class Person:
+#     __name = "anonymous"
     
-    def __hello(self):
-        print("Hello person")
+#     def __hello(self):
+#         print("Hello person")
         
-    def welcom(self):
-       self.__hello()
-p1 = Person()
-print(p1.welcom())
+#     def welcom(self):
+#        self.__hello()
+# p1 = Person()
+# print(p1.welcom())
+
+
+# ###  INHERITANCE
+
+
+class Car:
+    @staticmethod
+    def start():
+        print("car started")
+        
+    def stop():
+        print("car atoppedd")
+
+class ToyotaCar(Car):
+    def __init__ (self, name):
+        self.name = name
+        
+car1 = ToyotaCar("FORTUNER")
+car2 = ToyotaCar("INNOVA")
+
+print(car1.name)
+print(car1.start())
