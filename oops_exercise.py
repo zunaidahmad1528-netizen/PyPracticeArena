@@ -309,4 +309,24 @@
 # del s1
 # print(s1)
 
+# class Details:
+#     def __init__(self, account_number, account_password):
+#         self.account_number = account_number
+#         self.__account_password = account_password
+        
+#     def reset_password(self):
+#         print(self.__account_password)
+# acc1 = Details("2463265772002", "zunaid123")
+# print(acc1.account_number)
+# print(acc1.reset_password())
 
+class Person:
+    __name = "anonymous"
+    
+    def __hello(self):
+        print("Hello person")
+        
+    def welcom(self):
+       self.__hello()
+p1 = Person()
+print(p1.welcom())
