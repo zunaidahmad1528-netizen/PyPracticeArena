@@ -335,20 +335,42 @@
 # ###  INHERITANCE
 
 
-class Car:
+# class Car:
+#     @staticmethod
+#     def start():
+#         print("car started")
+        
+#     def stop():
+#         print("car atoppedd")
+
+# class ToyotaCar(Car):
+#     def __init__ (self, name):
+#         self.name = name
+        
+# car1 = ToyotaCar("FORTUNER")
+# car2 = ToyotaCar("INNOVA")
+
+# print(car1.name)
+# print(car1.start())
+
+
+class Bike:
     @staticmethod
     def start():
-        print("car started")
+        print("Bike started..")
         
+    @staticmethod
+    def accelearte():
+        print("Bike is ready to accelearte..")
+        
+    @staticmethod
     def stop():
-        print("car atoppedd")
-
-class ToyotaCar(Car):
+        print("Bike stopped..")
+class JavaBike(Bike):
     def __init__ (self, name):
         self.name = name
-        
-car1 = ToyotaCar("FORTUNER")
-car2 = ToyotaCar("INNOVA")
-
-print(car1.name)
-print(car1.start())
+bike1 = JavaBike("JavaBike15")
+print(bike1.name)
+print(bike1.start())
+print(bike1.accelearte())
+print(bike1.stop())
