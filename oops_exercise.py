@@ -353,6 +353,8 @@
 # print(car1.name)
 # print(car1.start())
 
+# single level inheritance
+
 
 # class Bike:
 #     @staticmethod
@@ -375,38 +377,74 @@
 # print(bike1.accelearte())
 # print(bike1.stop())
 
-class Animal:
-    colour = "yellow"
-    height = "5 feet"
-    @staticmethod
-    def speak():
-        print("Animal speaks")
+# class Animal:
+#     colour = "yellow"
+#     height = "5 feet"
+#     @staticmethod
+#     def speak():
+#         print("Animal speaks")
     
-    @staticmethod
-    def walk():
-        print("Animalwalks")
+#     @staticmethod
+#     def walk():
+#         print("Animalwalks")
     
-    @staticmethod
-    def eat():
-        print("Animal eats")
+#     @staticmethod
+#     def eat():
+#         print("Animal eats")
         
-    @staticmethod
-    def sleep():
-        print("Animal sleeps")
+#     @staticmethod
+#     def sleep():
+#         print("Animal sleeps")
         
-    @staticmethod
-    def run():
-        print("Animal runs")
+#     @staticmethod
+#     def run():
+#         print("Animal runs")
 
-class Lion(Animal):
-    def __init__ (self, name):
-        self.name = name
-lion1 = Lion("African Lion")
-print(Lion.colour)
-print(Lion.height)
-print(lion1.name)
-print(lion1.speak())
-print(lion1.walk())
-print(lion1.eat())
-print(lion1.sleep())
-print(lion1.run())
+# class Lion(Animal):
+#     def __init__ (self, name):
+#         self.name = name
+# lion1 = Lion("African Lion")
+# print(Lion.colour)
+# print(Lion.height)
+# print(lion1.name)
+# print(lion1.speak())
+# print(lion1.walk())
+# print(lion1.eat())
+# print(lion1.sleep())
+# print(lion1.run())
+
+
+# multi level inheritance
+
+class Car:
+    @staticmethod
+    def start():
+        print("car started...")
+    
+    @staticmethod
+    def accelearte():
+        print("car is ready to accelearte...")
+        
+    @staticmethod
+    def stop():
+        print("car stopped...")
+        
+class ToyotaCar(Car):
+    def __init__ (self, brand):
+        self.brand = brand
+    
+class FortunerCar(ToyotaCar):
+    def __init__ (self, type, colour, model):
+        self.type = type
+        self.colour = colour
+        self.model = model
+for1 = FortunerCar("Suv", "black", 2025)
+print(for1.type)
+print(for1.colour)
+print(for1.model)
+for1.start()
+for1.accelearte()
+for1.stop()
+for1.brand = "Toyota"
+print(for1.brand)
+
