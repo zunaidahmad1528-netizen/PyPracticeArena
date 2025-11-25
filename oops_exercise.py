@@ -416,35 +416,51 @@
 
 # multi level inheritance
 
-class Car:
-    @staticmethod
-    def start():
-        print("car started...")
+# class Car:
+#     @staticmethod
+#     def start():
+#         print("car started...")
     
-    @staticmethod
-    def accelearte():
-        print("car is ready to accelearte...")
+#     @staticmethod
+#     def accelearte():
+#         print("car is ready to accelearte...")
         
-    @staticmethod
-    def stop():
-        print("car stopped...")
+#     @staticmethod
+#     def stop():
+#         print("car stopped...")
         
-class ToyotaCar(Car):
-    def __init__ (self, brand):
-        self.brand = brand
+# class ToyotaCar(Car):
+#     def __init__ (self, brand):
+#         self.brand = brand
     
-class FortunerCar(ToyotaCar):
-    def __init__ (self, type, colour, model):
-        self.type = type
-        self.colour = colour
-        self.model = model
-for1 = FortunerCar("Suv", "black", 2025)
-print(for1.type)
-print(for1.colour)
-print(for1.model)
-for1.start()
-for1.accelearte()
-for1.stop()
-for1.brand = "Toyota"
-print(for1.brand)
+# class FortunerCar(ToyotaCar):
+#     def __init__ (self, type, colour, model):
+#         self.type = type
+#         self.colour = colour
+#         self.model = model
+# for1 = FortunerCar("Suv", "black", 2025)
+# print(for1.type)
+# print(for1.colour)
+# print(for1.model)
+# for1.start()
+# for1.accelearte()
+# for1.stop()
+# for1.brand = "Toyota"
+# print(for1.brand)
 
+
+
+
+# multiple inheritance
+
+
+class A:
+    varA = "I am class A"
+class B:
+    varB = "I am class B"
+class C(A, B):
+    varC = "I am class C"
+c1 = C()
+print(c1.varA)
+print(c1.varB)
+print(c1.varC)
