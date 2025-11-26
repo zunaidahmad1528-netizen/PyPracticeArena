@@ -468,28 +468,56 @@
 #  SUPER METHOD
 # super() method is used to access methods of the parent class.
 
-class Car:
-    def __init__ (self, type):
-        self.type = type
+# class Car:
+#     def __init__ (self, type):
+#         self.type = type
     
-    @staticmethod 
-    def start():
-        print('car started...')
+#     @staticmethod 
+#     def start():
+#         print('car started...')
      
-    @staticmethod   
-    def stop():
-        print("car stopped...")
+#     @staticmethod   
+#     def stop():
+#         print("car stopped...")
     
-class ToyotaCar(Car):
-    def __init__ (self, model, name, type):
-        self.name = name
-        self.model = model
-        super().__init__(type)
+# class ToyotaCar(Car):
+#     def __init__ (self, model, name, type):
+#         self.name = name
+#         self.model = model
+#         super().__init__(type)
         
         
-car1 = ToyotaCar("2025", "Fourtuner", "suv")
-print(car1.name)
-print(car1.type)
-print(car1.model)
-car1.start()
-car1.stop()
+# car1 = ToyotaCar("2025", "Fourtuner", "suv")
+# print(car1.name)
+# print(car1.type)
+# print(car1.model)
+# car1.start()
+# car1.stop()
+
+
+class Student:
+    def __init__ (self, name):
+        
+     self.name = name
+    @staticmethod
+    def greet():
+         print("hello student")
+    @staticmethod
+    def bye():
+        print("bye student")
+        
+class StudentDetails(Student):
+    def __init__ (self, name, marks, age):
+        self.marks = marks
+        super().__init__(name)
+        self.age = age
+        
+student1 = StudentDetails("zunaid", 97, 19)
+Student.greet()
+print(student1.name)
+print(student1.age)
+print(student1.marks)
+Student.bye()
+    
+         
+    
