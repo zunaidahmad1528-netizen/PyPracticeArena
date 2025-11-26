@@ -495,29 +495,55 @@
 # car1.stop()
 
 
-class Student:
-    def __init__ (self, name):
+# class Student:
+#     def __init__ (self, name):
         
-     self.name = name
+#      self.name = name
+#     @staticmethod
+#     def greet():
+#          print("hello student")
+#     @staticmethod
+#     def bye():
+#         print("bye student")
+        
+# class StudentDetails(Student):
+#     def __init__ (self, name, marks, age):
+#         self.marks = marks
+#         super().__init__(name)
+#         self.age = age
+        
+# student1 = StudentDetails("zunaid", 97, 19)
+# Student.greet()
+# print(student1.name)
+# print(student1.age)
+# print(student1.marks)
+# Student.bye()
+    
+class Animal:
+    def __init__ (self, species):
+        self.species = species
     @staticmethod
-    def greet():
-         print("hello student")
+    def eat():
+        print("Animal eats")
     @staticmethod
-    def bye():
-        print("bye student")
+    def sleep():
+        print("Animal sleeps")
+    @staticmethod
+    def run():
+        print("Animal runs")
+class Info(Animal):
+    def __init__ (self, breed, species):
+        self.breed = breed
+        super().__init__(species)
+animal1 = Info("Lion", "Mammal")       
+   
+print(animal1.breed)
+print(animal1.species)
+Animal.eat()
+Animal.sleep()
+Animal.run()
         
-class StudentDetails(Student):
-    def __init__ (self, name, marks, age):
-        self.marks = marks
-        super().__init__(name)
-        self.age = age
         
-student1 = StudentDetails("zunaid", 97, 19)
-Student.greet()
-print(student1.name)
-print(student1.age)
-print(student1.marks)
-Student.bye()
     
          
     
