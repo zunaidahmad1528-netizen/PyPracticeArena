@@ -519,31 +519,53 @@
 # print(student1.marks)
 # Student.bye()
     
-class Animal:
-    def __init__ (self, species):
-        self.species = species
-    @staticmethod
-    def eat():
-        print("Animal eats")
-    @staticmethod
-    def sleep():
-        print("Animal sleeps")
-    @staticmethod
-    def run():
-        print("Animal runs")
-class Info(Animal):
-    def __init__ (self, breed, species):
-        self.breed = breed
-        super().__init__(species)
-animal1 = Info("Lion", "Mammal")       
+# class Animal:
+#     def __init__ (self, species):
+#         self.species = species
+#     @staticmethod
+#     def eat():
+#         print("Animal eats")
+#     @staticmethod
+#     def sleep():
+#         print("Animal sleeps")
+#     @staticmethod
+#     def run():
+#         print("Animal runs")
+# class Info(Animal):
+#     def __init__ (self, breed, species):
+#         self.breed = breed
+#         super().__init__(species)
+# animal1 = Info("Lion", "Mammal")       
    
-print(animal1.breed)
-print(animal1.species)
-Animal.eat()
-Animal.sleep()
-Animal.run()
+# print(animal1.breed)
+# print(animal1.species)
+# Animal.eat()
+# Animal.sleep()
+# Animal.run()
         
         
-    
-         
-    
+# class Person:
+#     def __init__ (self, name , age , date_of_birth):
+#         self.name = name
+#         self.age = age
+#         self.date_of_birth = date_of_birth
+#     @staticmethod
+#     def greet():
+#         print("Hello :" "zunaid")
+#     @staticmethod
+#     def Bye():
+#         print("Bye have a nice day")
+# class employee(Person):
+#     def __init__ (self, name, age, date_of_birth, emp_id, emp_salary):
+#         self.emp_id = emp_id
+#         self.emp_salary = emp_salary
+#         super().greet()
+#         super().__init__(name, age, date_of_birth)
+# employee1 = employee("zunaid", 19, "01-01-2005", "A101", 50000)
+# Person.greet()
+# print(employee1.name)
+# print(employee1.age)
+# print(employee1.date_of_birth)
+# print(employee1.emp_id)
+# print(employee1.emp_salary)
+# Person.Bye()
