@@ -584,12 +584,33 @@
 
 
 # class method 
-class Person:
-    name = "ananymous"
-    def change_name(self, name):
-        self.name = name
-p1 = Person()
-p1.change_name("zunaid")
-print(p1.name)
+# class Person:
+#     name = "ananymous"
+#     def change_name(self, name):
+#         self.name = name
+# p1 = Person()
+# p1.change_name("zunaid")
 
+# print(p1.name)
+# print(Person.name)
+
+# class Person:
+#     name = "ananymous"
+    
+#     def change_name(self, name):
+#         Person.name = name
         
+# p1 = Person()
+# p1.change_name('zunaid')
+# print(p1.name)
+# print(Person.name)
+        
+        
+# class Person:
+#     name = "ananymous"
+#     def change_name(self, name):
+#         self.__class__.name = name
+# p1 = Person()
+# p1.change_name("zunaid")
+# print(p1.name)
+# print(Person.name)
