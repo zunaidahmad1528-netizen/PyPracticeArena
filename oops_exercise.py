@@ -625,3 +625,13 @@
 # p1.change_name("zunaid")
 # print(Person.name)
 # print(p1.name)
+
+class Student:
+    school = "xyz school"
+    @classmethod
+
+    def changeSchool(cls, school_name):
+        cls.school_name = school_name
+s1 = Student()
+s1.changeSchool("abc school")
+print(s1.school_name)
