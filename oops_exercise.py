@@ -614,3 +614,14 @@
 # p1.change_name("zunaid")
 # print(p1.name)
 # print(Person.name)
+
+# class Person:
+#     name = "ananymous"
+#     def change_name(self, name):
+#         self.__class__.name = name
+        
+# p1 = Person()
+# print(p1.name)
+# p1.change_name("zunaid")
+# print(Person.name)
+# print(p1.name)
