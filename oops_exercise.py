@@ -571,5 +571,25 @@
 # Person.Bye()
 
 
-print("End of oops_exercise.py")
+# print("End of oops_exercise.py")
 
+# class Person:
+#     name = "ananymous"
+#     def __init__ (self, name):
+#         self.name = name
+        
+# p1 = Person
+# p1.name = "zunaid"
+# print(p1.name)
+
+
+# class method 
+class Person:
+    name = "ananymous"
+    def change_name(self, name):
+        self.name = name
+p1 = Person()
+p1.change_name("zunaid")
+print(p1.name)
+
+        
