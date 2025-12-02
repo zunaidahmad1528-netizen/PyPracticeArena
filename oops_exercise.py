@@ -626,12 +626,23 @@
 # print(Person.name)
 # print(p1.name)
 
-class Student:
-    school = "xyz school"
-    @classmethod
+# class Student:
+#     school = "xyz school"
+#     @classmethod
 
-    def changeSchool(cls, school_name):
-        cls.school_name = school_name
-s1 = Student()
-s1.changeSchool("abc school")
-print(s1.school_name)
+#     def changeSchool(cls, school_name):
+#         cls.school_name = school_name
+# s1 = Student()
+# s1.changeSchool("abc school")
+# print(s1.school_name)
+
+# property decorator
+class Student:
+    def __init__ (self, phy, chem, math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+        self.percentage = str((self.phy + self.chem + self.math)/3) + "%"
+student1 = Student(97, 95, 98)
+print(student1.percentage)
+        
