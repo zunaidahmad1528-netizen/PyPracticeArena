@@ -657,23 +657,27 @@
 
 
 # @property
-class MyClass:
-    def __init__ (self, value):
-        self.__value = value
-    @property
-    def value(self):
-        return self.__value
+# class MyClass:
+#     def __init__ (self, value):
+#         self.__value = value
+#     @property
+#     def value(self):
+#         return self.__value
     
-obj = MyClass(10)
-print(obj.value)
+# obj = MyClass(10)
+# print(obj.value)
 
 
+# class Mathoperator():
+#     def __add__(self, a, b):
+#         self.a = a
+#         self.b = b
+#         return a + b
+#     def __sub__ (self, a, b):
+#         return a - b
 
-
-
-
-
-
+# math = Mathoperator()
+# print(math.__add__(10, 5))
 
 
 
