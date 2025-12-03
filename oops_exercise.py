@@ -679,6 +679,20 @@
 # math = Mathoperator()
 # print(math.__add__(10, 5))
 
+class student:
+    def __init__ (self, name, marks):
+        self.name = name 
+        self.marks = marks
+        
+    def __add__ (self):
+        return self.marks + self.marks
+    
+obj = student("zunaid", 87)
+
+print(obj.name)
+print(obj.marks)
+print(obj.__add__())
+
 
 
 # polymorphism : operator overloading
