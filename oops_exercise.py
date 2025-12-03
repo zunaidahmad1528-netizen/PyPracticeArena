@@ -637,19 +637,45 @@
 # print(s1.school_name)
 
 # property decorator
-class Student:
-    def __init__ (self, phy, chem, math):
-        self.phy = phy
-        self.chem = chem
-        self.math = math
-        # self.percentage = str((self.phy + self.chem + self.math)/3) + "%"
+# class Student:
+#     def __init__ (self, phy, chem, math):
+#         self.phy = phy
+#         self.chem = chem
+#         self.math = math
+#         # self.percentage = str((self.phy + self.chem + self.math)/3) + "%"
+#     @property
+#     def percentage(self):
+#         return str((self.phy + self.chem + self.math)/3) + "%"
+    
+# student1 = Student(97, 95, 98)
+# print(student1.percentage)
+    
+# student1.phy = 87
+# print(student1.percentage)
+# print(student1.phy)
+
+
+
+# @property
+class MyClass:
+    def __init__ (self, value):
+        self.__value = value
     @property
-    def percentage(self):
-        return str((self.phy + self.chem + self.math)/3) + "%"
+    def value(self):
+        return self.__value
     
-student1 = Student(97, 95, 98)
-print(student1.percentage)
-    
-student1.phy = 87
-print(student1.percentage)
-print(student1.phy)
+obj = MyClass(10)
+print(obj.value)
+
+
+
+
+
+
+
+
+
+
+
+# polymorphism : operator overloading
+# same operator with different data types
