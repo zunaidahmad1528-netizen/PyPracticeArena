@@ -732,13 +732,26 @@ print(obj.__add__())
 # a = Add()
 # print(a.sum(2, 3))
 # print(a.sum(2, 3, 4))
-class Dog:
-    def sound(self):
-        print("Bark")
+# class Dog:
+#     def sound(self):
+#         print("Bark")
 
-class Cat:
-    def sound(self):
-        print("Meow")
+# class Cat:
+#     def sound(self):
+#         print("Meow")
 
-for animal in (Dog(), Cat()):
-    animal.sound()
+# for animal in (Dog(), Cat()):
+#     animal.sound()
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def draw(self):
+        pass
+
+class Circle(Shape):
+    def draw(self):
+        print("Drawing Circle")
+
+c = Circle()
+c.draw()
