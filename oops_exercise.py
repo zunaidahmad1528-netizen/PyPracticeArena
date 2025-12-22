@@ -700,14 +700,28 @@ print(obj.__add__())
 #include <iostream>
 # using namespace std;
 
-class Student:
-    def __init__(self, roll, name):
-        self.roll = roll
-        self.name = name
+# class Student:
+#     def __init__(self, roll, name):
+#         self.roll = roll
+#         self.name = name
 
-    def display(self):
-        print(self.roll, self.name)
+#     def display(self):
+#         print(self.roll, self.name)
 
-s1 = Student(1, "Ali")
-s1.display()
-s2 = Student(2, "Ais")
+# s1 = Student(1, "Ali")
+# s1.display()
+# s2 = Student(2, "Ais")
+
+class Bank:
+    def __init__(self):
+        self.__balance = 0   # private variable
+
+    def set_balance(self, amount):
+        self.__balance = amount
+
+    def get_balance(self):
+        return self.__balance
+
+b = Bank()
+b.set_balance(5000)
+print(b.get_balance())
