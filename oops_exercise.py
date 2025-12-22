@@ -712,16 +712,23 @@ print(obj.__add__())
 # s1.display()
 # s2 = Student(2, "Ais")
 
-class Bank:
-    def __init__(self):
-        self.__balance = 0   # private variable
+# class Bank:
+#     def __init__(self):
+#         self.__balance = 0   # private variable
 
-    def set_balance(self, amount):
-        self.__balance = amount
+#     def set_balance(self, amount):
+#         self.__balance = amount
 
-    def get_balance(self):
-        return self.__balance
+#     def get_balance(self):
+#         return self.__balance
 
-b = Bank()
-b.set_balance(5000)
-print(b.get_balance())
+# b = Bank()
+# b.set_balance(5000)
+# print(b.get_balance())
+class Add:
+    def sum(self, a, b, c=0):
+        return a + b + c
+
+a = Add()
+print(a.sum(2, 3))
+print(a.sum(2, 3, 4))
