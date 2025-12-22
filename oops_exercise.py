@@ -697,3 +697,17 @@ print(obj.__add__())
 
 # polymorphism : operator overloading
 # same operator with different data types
+#include <iostream>
+# using namespace std;
+
+class Student:
+    def __init__(self, roll, name):
+        self.roll = roll
+        self.name = name
+
+    def display(self):
+        print(self.roll, self.name)
+
+s1 = Student(1, "Ali")
+s1.display()
+s2 = Student(2, "Ais")
