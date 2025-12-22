@@ -725,10 +725,20 @@ print(obj.__add__())
 # b = Bank()
 # b.set_balance(5000)
 # print(b.get_balance())
-class Add:
-    def sum(self, a, b, c=0):
-        return a + b + c
+# class Add:
+#     def sum(self, a, b, c=0):
+#         return a + b + c
 
-a = Add()
-print(a.sum(2, 3))
-print(a.sum(2, 3, 4))
+# a = Add()
+# print(a.sum(2, 3))
+# print(a.sum(2, 3, 4))
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+for animal in (Dog(), Cat()):
+    animal.sound()
