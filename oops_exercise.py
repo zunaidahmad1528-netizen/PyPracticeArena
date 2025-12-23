@@ -742,16 +742,27 @@ print(obj.__add__())
 
 # for animal in (Dog(), Cat()):
 #     animal.sound()
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-class Shape(ABC):
-    @abstractmethod
-    def draw(self):
-        pass
+# class Shape(ABC):
+#     @abstractmethod
+#     def draw(self):
+#         pass
 
-class Circle(Shape):
-    def draw(self):
-        print("Drawing Circle")
+# class Circle(Shape):
+#     def draw(self):
+#         print("Drawing Circle")
 
-c = Circle()
-c.draw()
+# c = Circle()
+# c.draw()
+class Parent:
+    def show(self):
+        print("Parent show")
+
+class Child(Parent):
+    def show(self):
+        # TODO: call parent show first
+        print("Child show")
+
+obj = Child()
+obj.show()
