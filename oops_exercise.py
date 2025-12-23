@@ -755,14 +755,33 @@ print(obj.__add__())
 
 # c = Circle()
 # c.draw()
-class Parent:
-    def show(self):
-        print("Parent show")
+# class Parent:
+#     def show(self):
+#         print("Parent show")
 
-class Child(Parent):
-    def show(self):
-        # TODO: call parent show first
-        print("Child show")
+# class Child(Parent):
+#     def show(self):
+#         # TODO: call parent show first
+#         print("Child show")
 
-obj = Child()
-obj.show()
+# obj = Child()
+# obj.show()
+class A:
+    def display(self):
+        print("Class A")
+
+class B(A):
+    def display(self):
+        print("Class B")
+
+class C(A):
+    def display(self):
+        print("Class C")
+
+class D(B, C):
+    pass
+
+d = D()
+d.display()
+
+# TODO: print MRO of class D
