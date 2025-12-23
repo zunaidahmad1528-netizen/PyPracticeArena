@@ -808,3 +808,13 @@ print(obj.__add__())
 # r = Rectangle(10, 5)
 # print(r.area())
 # print(r.perimeter())
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance
+
+    # TODO: create deposit method
+    # TODO: create withdraw method
+
+acc = BankAccount(5000)
+
+# TODO: access private variable (__balance)
