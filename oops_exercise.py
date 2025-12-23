@@ -817,18 +817,92 @@ print(obj.__add__())
 
 # acc = BankAccount(5000)
 
-# TODO: access private variable (__balance)
-class Vector:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+# # TODO: access private variable (__balance)
+# class Vector:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
 
-    # TODO: overload + operator
-    # TODO: overload == operator
-    # TODO: overload print()
+#     # TODO: overload + operator
+#     # TODO: overload == operator
+#     # TODO: overload print()
 
-v1 = Vector(2, 3)
-v2 = Vector(4, 5)
+# v1 = Vector(2, 3)
+# v2 = Vector(4, 5)
 
-print(v1 + v2)
-print(v1 == v2)
+# print(v1 + v2)
+# print(v1 == v2)
+class Student:
+    college = "AKTU"
+
+    def __init__(self, name):
+        self.name = name
+
+s1 = Student("Aman")
+s2 = Student("Ravi")
+
+# TODO: change college only for s1
+# TODO: print both colleges
+
+class Engine:
+    def start(self):
+        return "Engine started"
+
+class Car:
+    def __init__(self):
+        # TODO: use Engine class here
+        pass
+
+    def drive(self):
+        # TODO: call engine start
+        pass
+
+c = Car()
+print(c.drive())
+
+
+
+
+class LowBalanceError(Exception):
+    pass
+
+class Account:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def withdraw(self, amount):
+        # TODO: raise LowBalanceError if amount > balance
+        pass
+
+acc = Account(3000)
+acc.withdraw(5000)
+
+
+class Singleton:
+    _instance = None
+
+    def __new__(cls):
+        # TODO: ensure only one object is created
+        pass
+
+s1 = Singleton()
+s2 = Singleton()
+
+print(s1 is s2)
+
+
+
+class Dog:
+    def speak(self):
+        return "Bark"
+
+class Cat:
+    def speak(self):
+        return "Meow"
+
+def animal_sound(obj):
+    # TODO: call speak method
+    pass
+
+print(animal_sound(Dog()))
+print(animal_sound(Cat()))
