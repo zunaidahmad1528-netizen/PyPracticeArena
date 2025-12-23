@@ -766,22 +766,45 @@ print(obj.__add__())
 
 # obj = Child()
 # obj.show()
-class A:
-    def display(self):
-        print("Class A")
+# class A:
+#     def display(self):
+#         print("Class A")
 
-class B(A):
-    def display(self):
-        print("Class B")
+# class B(A):
+#     def display(self):
+#         print("Class B")
 
-class C(A):
-    def display(self):
-        print("Class C")
+# class C(A):
+#     def display(self):
+#         print("Class C")
 
-class D(B, C):
-    pass
+# class D(B, C):
+#     pass
 
-d = D()
-d.display()
+# d = D()
+# d.display()
 
-# TODO: print MRO of class D
+# # TODO: print MRO of class D
+# from abc import ABC, abstractmethod
+
+# class Shape(ABC):
+
+#     @abstractmethod
+#     def area(self):
+#         pass
+
+#     @abstractmethod
+#     def perimeter(self):
+#         pass
+
+# class Rectangle(Shape):
+#     def __init__(self, l, b):
+#         self.l = l
+#         self.b = b
+
+#     # TODO: implement area and perimeter
+
+
+# r = Rectangle(10, 5)
+# print(r.area())
+# print(r.perimeter())
