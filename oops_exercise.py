@@ -808,13 +808,27 @@ print(obj.__add__())
 # r = Rectangle(10, 5)
 # print(r.area())
 # print(r.perimeter())
-class BankAccount:
-    def __init__(self, balance):
-        self.__balance = balance
+# class BankAccount:
+#     def __init__(self, balance):
+#         self.__balance = balance
 
-    # TODO: create deposit method
-    # TODO: create withdraw method
+#     # TODO: create deposit method
+#     # TODO: create withdraw method
 
-acc = BankAccount(5000)
+# acc = BankAccount(5000)
 
 # TODO: access private variable (__balance)
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    # TODO: overload + operator
+    # TODO: overload == operator
+    # TODO: overload print()
+
+v1 = Vector(2, 3)
+v2 = Vector(4, 5)
+
+print(v1 + v2)
+print(v1 == v2)
