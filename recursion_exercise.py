@@ -36,86 +36,121 @@
 
 # def power(x, n):
 #     if n == 0:
-#         return 1
-#     return x * power(x, n - 1)
+# #         return 1
+# #     return x * power(x, n - 1)
 
-# print(power(2, 5))
-
-
-# def count_digits(n):
-#     if n == 0:
-#         return 0
-#     return 1 + count_digits(n // 10)
-
-# print(count_digits(12345))
-
-# def sum_of_digits(n):
-#     if n == 0:
-#         return 0
-#     return (n % 10) + sum_of_digits(n // 10)
-
-# print(sum_of_digits(123))
-# def reverse_number(n, rev=0):
-#     if n == 0:
-#         return rev
-#     return reverse_number(n // 10, rev * 10 + n % 10)
-
-# print(reverse_number(1234))
+# # print(power(2, 5))
 
 
-# def reverse_number(n, rev=0):
-#     if n == 0:
-#         return rev
-#     return reverse_number(n // 10, rev * 10 + n % 10)
+# # def count_digits(n):
+# #     if n == 0:
+# #         return 0
+# #     return 1 + count_digits(n // 10)
 
-# print(reverse_number(1234))
+# # print(count_digits(12345))
+
+# # def sum_of_digits(n):
+# #     if n == 0:
+# #         return 0
+# #     return (n % 10) + sum_of_digits(n // 10)
+
+# # print(sum_of_digits(123))
+# # def reverse_number(n, rev=0):
+# #     if n == 0:
+# #         return rev
+# #     return reverse_number(n // 10, rev * 10 + n % 10)
+
+# # print(reverse_number(1234))
 
 
-def is_palindrome(s, start, end):
-    if start >= end:
-        return True
-    if s[start] != s[end]:
-        return False
-    return is_palindrome(s, start + 1, end - 1)
+# # def reverse_number(n, rev=0):
+# #     if n == 0:
+# #         return rev
+# #     return reverse_number(n // 10, rev * 10 + n % 10)
 
-print(is_palindrome("madam", 0, 4))
+# # print(reverse_number(1234))
 
 
-def gcd(a, b):
+# def is_palindrome(s, start, end):
+#     if start >= end:
+#         return True
+#     if s[start] != s[end]:
+#         return False
+#     return is_palindrome(s, start + 1, end - 1)
+
+# print(is_palindrome("madam", 0, 4))
+
+
+# def gcd(a, b):
+#     if b == 0:
+#         return a
+#     return gcd(b, a % b)
+
+# print(gcd(48, 18))
+
+
+# def binary_search(arr, low, high, key):
+#     if low > high:
+#         return -1
+#     mid = (low + high) // 2
+#     if arr[mid] == key:
+#         return mid
+#     elif key < arr[mid]:
+#         return binary_search(arr, low, mid - 1, key)
+#     else:
+#         return binary_search(arr, mid + 1, high, key)
+
+# arr = [1, 3, 5, 7, 9]
+# print(binary_search(arr, 0, len(arr) - 1, 7))
+
+# def is_sorted(arr, index):
+#     if index == len(arr) - 1:
+#         return True
+#     if arr[index] > arr[index + 1]:
+#         return False
+#     return is_sorted(arr, index + 1)
+
+# print(is_sorted([1, 2, 3, 4, 5], 0))
+
+
+# def find_max(arr, index):
+#     if index == len(arr) - 1:
+#         return arr[index]
+#     return max(arr[index], find_max(arr, index + 1))
+
+# print(find_max([3, 7, 2, 9, 5], 0))
+
+
+def flatten_list(lst):
+    result = []
+    for item in lst:
+        if isinstance(item, list):
+            result.extend(flatten_list(item))
+        else:
+            result.append(item)
+    return result
+
+print(flatten_list([1, [2, [3, 4]], 5]))
+
+
+def multiply(a, b):
     if b == 0:
-        return a
-    return gcd(b, a % b)
+        return 0
+    return a + multiply(a, b - 1)
 
-print(gcd(48, 18))
-
-
-def binary_search(arr, low, high, key):
-    if low > high:
-        return -1
-    mid = (low + high) // 2
-    if arr[mid] == key:
-        return mid
-    elif key < arr[mid]:
-        return binary_search(arr, low, mid - 1, key)
-    else:
-        return binary_search(arr, mid + 1, high, key)
-
-arr = [1, 3, 5, 7, 9]
-print(binary_search(arr, 0, len(arr) - 1, 7))
-
-def is_sorted(arr, index):
-    if index == len(arr) - 1:
-        return True
-    if arr[index] > arr[index + 1]:
-        return False
-    return is_sorted(arr, index + 1)
-
-print(is_sorted([1, 2, 3, 4, 5], 0))
+print(multiply(4, 5))
 
 
-def find_max(arr, index):
-    if index == len(arr) - 1:
-        return arr[index]
-    return max(arr[index], find_max(arr, index + 1))
+def tower_of_hanoi(n, src, helper, dest):
+    if n == 1:
+        print(f"Move disk 1 from {src} to {dest}")
+        return
+    tower_of_hanoi(n - 1, src, dest, helper)
+    print(f"Move disk {n} from {src} to {dest}")
+    tower_of_hanoi(n - 1, helper, src, dest)
 
-print(find_max([3, 7, 2, 9, 5], 0))
+tower_of_hanoi(3, 'A', 'B', 'C')
+def count_ways_to_climb(n):
+    if n == 0 or n == 1:
+        return 1
+    return count_ways_to_climb(n - 1) + count_ways_to_climb(n - 2)
