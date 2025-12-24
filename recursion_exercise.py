@@ -121,36 +121,36 @@
 # print(find_max([3, 7, 2, 9, 5], 0))
 
 
-def flatten_list(lst):
-    result = []
-    for item in lst:
-        if isinstance(item, list):
-            result.extend(flatten_list(item))
-        else:
-            result.append(item)
-    return result
+# def flatten_list(lst):
+#     result = []
+#     for item in lst:
+#         if isinstance(item, list):
+#             result.extend(flatten_list(item))
+#         else:
+#             result.append(item)
+#     return result
 
-print(flatten_list([1, [2, [3, 4]], 5]))
-
-
-def multiply(a, b):
-    if b == 0:
-        return 0
-    return a + multiply(a, b - 1)
-
-print(multiply(4, 5))
+# print(flatten_list([1, [2, [3, 4]], 5]))
 
 
-def tower_of_hanoi(n, src, helper, dest):
-    if n == 1:
-        print(f"Move disk 1 from {src} to {dest}")
-        return
-    tower_of_hanoi(n - 1, src, dest, helper)
-    print(f"Move disk {n} from {src} to {dest}")
-    tower_of_hanoi(n - 1, helper, src, dest)
+# def multiply(a, b):
+#     if b == 0:
+#         return 0
+#     return a + multiply(a, b - 1)
 
-tower_of_hanoi(3, 'A', 'B', 'C')
-def count_ways_to_climb(n):
-    if n == 0 or n == 1:
-        return 1
-    return count_ways_to_climb(n - 1) + count_ways_to_climb(n - 2)
+# print(multiply(4, 5))
+
+
+# def tower_of_hanoi(n, src, helper, dest):
+#     if n == 1:
+#         print(f"Move disk 1 from {src} to {dest}")
+#         return
+#     tower_of_hanoi(n - 1, src, dest, helper)
+#     print(f"Move disk {n} from {src} to {dest}")
+#     tower_of_hanoi(n - 1, helper, src, dest)
+
+# tower_of_hanoi(3, 'A', 'B', 'C')
+# def count_ways_to_climb(n):
+#     if n == 0 or n == 1:
+#         return 1
+#     return count_ways_to_climb(n - 1) + count_ways_to_climb(n - 2)
