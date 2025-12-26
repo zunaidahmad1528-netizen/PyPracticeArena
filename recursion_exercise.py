@@ -186,3 +186,16 @@ def solve_n_queens(n, row=0, board=[]):
 
 solve_n_queens(4)
 
+# 3. Subset Sum Problem
+def subset_sum(nums, target, index=0, current=[]):
+    if target == 0:
+        print(current)
+        return
+    if index >= len(nums):
+        return
+    # Include current number
+    subset_sum(nums, target - nums[index], index + 1, current + [nums[index]])
+    # Exclude current number
+    subset_sum(nums, target, index + 1, current)
+
+subset_sum([2, 4, 6, 10], 16)
