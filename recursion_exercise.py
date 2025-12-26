@@ -154,3 +154,26 @@
 #     if n == 0 or n == 1:
 #         return 1
 #     return count_ways_to_climb(n - 1) + count_ways_to_climb(n - 2)
+
+def permutations(s, step=0):
+    if step == len(s):
+        print("".join(s))
+    for i in range(step, len(s)):
+        s_copy = [c for c in s]
+        s_copy[step], s_copy[i] = s_copy[i], s_copy[step]
+        permutations(s_copy, step + 1)
+
+permutations(list("ABC"))
+
+
+# 2. N-Queens Problem (place N queens on an NxN chessboard)
+def is_safe(board, row, col, n):
+    # Check column
+    for i in range(row):
+        if board[i] == col:
+            return False
+        # Check diagonals
+        if abs(board[i] - col) == abs(i - row):
+            return False
+    return True
+
