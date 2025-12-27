@@ -127,3 +127,10 @@ while True:
     print("9. Display both sets")
     print("10. Clear Set A")
     print("11. Exit")
+    
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        x = int(input("Enter element to add: "))
+        set_a.add(x)
+        print("Updated Set A =", set_a)
