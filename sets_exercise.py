@@ -134,3 +134,11 @@ while True:
         x = int(input("Enter element to add: "))
         set_a.add(x)
         print("Updated Set A =", set_a)
+
+    elif choice == 2:
+        x = int(input("Enter element to remove: "))
+        if x in set_a:
+            set_a.remove(x)
+            print("Updated Set A =", set_a)
+        else:
+            print("Element not found")
