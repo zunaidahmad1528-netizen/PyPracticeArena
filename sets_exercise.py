@@ -88,3 +88,17 @@ set = {
     ("float" , 9.0)
 }
 print(set)
+
+# Long Set Program in Python
+
+print("------ SET OPERATIONS PROGRAM ------")
+
+# Taking input for first set
+n1 = int(input("Enter number of elements in Set A: "))
+set_a = set()
+
+for i in range(n1):
+    value = int(input("Enter element: "))
+    set_a.add(value)
+
+print("Set A =", set_a)
