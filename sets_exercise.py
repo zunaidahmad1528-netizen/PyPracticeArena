@@ -102,3 +102,13 @@ for i in range(n1):
     set_a.add(value)
 
 print("Set A =", set_a)
+
+# Taking input for second set
+n2 = int(input("\nEnter number of elements in Set B: "))
+set_b = set()
+
+for i in range(n2):
+    value = int(input("Enter element: "))
+    set_b.add(value)
+
+print("Set B =", set_b)
