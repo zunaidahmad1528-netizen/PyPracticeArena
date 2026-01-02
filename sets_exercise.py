@@ -142,3 +142,43 @@ while True:
             print("Updated Set A =", set_a)
         else:
             print("Element not found")
+    elif choice == 3:
+        print("Union =", set_a | set_b)
+
+    elif choice == 4:
+        print("Intersection =", set_a & set_b)
+
+    elif choice == 5:
+        print("A - B =", set_a - set_b)
+
+    elif choice == 6:
+        print("B - A =", set_b - set_a)
+        
+        
+        
+    elif choice == 7:
+        x = int(input("Enter element to check: "))
+        if x in set_a:
+            print("Element exists in Set A")
+        else:
+            print("Element does not exist")
+
+    elif choice == 8:
+        if set_a.issubset(set_b):
+            print("Set A is subset of Set B")
+        else:
+            print("Set A is NOT subset of Set B")
+    elif choice == 9:
+        print("Set A =", set_a)
+        print("Set B =", set_b)
+
+    elif choice == 10:
+        set_a.clear()
+        print("Set A cleared")
+
+    elif choice == 11:
+        print("Program Ended")
+        break
+
+    else:
+        print("Invalid Choice")
