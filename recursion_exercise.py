@@ -264,3 +264,15 @@ def longest_unique_substring(s):
 
 
 print(longest_unique_substring("abcabcbb"))  # Output: 3
+
+
+# Problem:
+# Array of size n-1 contains numbers from 1 to n. One number is missing.
+
+def missing_number(arr, n):
+    total = n * (n + 1) // 2
+    return total - sum(arr)
+
+
+arr = [1, 2, 4, 5, 6]
+print(missing_number(arr, 6))  # Output: 3
