@@ -346,3 +346,15 @@ def merge_intervals(intervals):
 
 
 print(merge_intervals([[1,3],[2,6],[8,10],[15,18]]))
+
+
+def word_frequency(text):
+    freq = {}
+
+    for word in text.split():
+        freq[word] = freq.get(word, 0) + 1
+
+    return freq
+
+
+print(word_frequency("python is easy and python is powerful"))
