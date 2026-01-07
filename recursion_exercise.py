@@ -155,219 +155,219 @@
 #         return 1
 #     return count_ways_to_climb(n - 1) + count_ways_to_climb(n - 2)
 
-def permutations(s, step=0):
-    if step == len(s):
-        print("".join(s))
-    for i in range(step, len(s)):
-        s_copy = [c for c in s]
-        s_copy[step], s_copy[i] = s_copy[i], s_copy[step]
-        permutations(s_copy, step + 1)
+# def permutations(s, step=0):
+#     if step == len(s):
+#         print("".join(s))
+#     for i in range(step, len(s)):
+#         s_copy = [c for c in s]
+#         s_copy[step], s_copy[i] = s_copy[i], s_copy[step]
+#         permutations(s_copy, step + 1)
 
-permutations(list("ABC"))
-
-
-# 2. N-Queens Problem (place N queens on an NxN chessboard)
-def is_safe(board, row, col, n):
-    # Check column
-    for i in range(row):
-        if board[i] == col:
-            return False
-        # Check diagonals
-        if abs(board[i] - col) == abs(i - row):
-            return False
-    return True
-def solve_n_queens(n, row=0, board=[]):
-    if row == n:
-        print(board)
-        return
-    for col in range(n):
-        if is_safe(board, row, col, n):
-            solve_n_queens(n, row + 1, board + [col])
-
-solve_n_queens(4)
-
-# 3. Subset Sum Problem
-def subset_sum(nums, target, index=0, current=[]):
-    if target == 0:
-        print(current)
-        return
-    if index >= len(nums):
-        return
-    # Include current number
-    subset_sum(nums, target - nums[index], index + 1, current + [nums[index]])
-    # Exclude current number
-    subset_sum(nums, target, index + 1, current)
-
-subset_sum([2, 4, 6, 10], 16)
+# permutations(list("ABC"))
 
 
-def exist(board, word):
-    def dfs(r, c, i):
-        if i == len(word):
-            return True
-        if r < 0 or c < 0 or r >= len(board) or c >= len(board[0]) or word[i] != board[r][c]:
-            return False
-        temp, board[r][c] = board[r][c], "#"
-        found = (dfs(r+1, c, i+1) or dfs(r-1, c, i+1) or
-                 dfs(r, c+1, i+1) or dfs(r, c-1, i+1))
-        board[r][c] = temp
-        return found
+# # 2. N-Queens Problem (place N queens on an NxN chessboard)
+# def is_safe(board, row, col, n):
+#     # Check column
+#     for i in range(row):
+#         if board[i] == col:
+#             return False
+#         # Check diagonals
+#         if abs(board[i] - col) == abs(i - row):
+#             return False
+#     return True
+# def solve_n_queens(n, row=0, board=[]):
+#     if row == n:
+#         print(board)
+#         return
+#     for col in range(n):
+#         if is_safe(board, row, col, n):
+#             solve_n_queens(n, row + 1, board + [col])
+
+# solve_n_queens(4)
+
+# # 3. Subset Sum Problem
+# def subset_sum(nums, target, index=0, current=[]):
+#     if target == 0:
+#         print(current)
+#         return
+#     if index >= len(nums):
+#         return
+#     # Include current number
+#     subset_sum(nums, target - nums[index], index + 1, current + [nums[index]])
+#     # Exclude current number
+#     subset_sum(nums, target, index + 1, current)
+
+# subset_sum([2, 4, 6, 10], 16)
+
+
+# def exist(board, word):
+#     def dfs(r, c, i):
+#         if i == len(word):
+#             return True
+#         if r < 0 or c < 0 or r >= len(board) or c >= len(board[0]) or word[i] != board[r][c]:
+#             return False
+#         temp, board[r][c] = board[r][c], "#"
+#         found = (dfs(r+1, c, i+1) or dfs(r-1, c, i+1) or
+#                  dfs(r, c+1, i+1) or dfs(r, c-1, i+1))
+#         board[r][c] = temp
+#         return found
     
-    for r in range(len(board)):
-        for c in range(len(board[0])):
-            if dfs(r, c, 0):
-                return True
-    return False
+#     for r in range(len(board)):
+#         for c in range(len(board[0])):
+#             if dfs(r, c, 0):
+#                 return True
+#     return False
 
-grid = [
-    ["A","B","C","E"],
-    ["S","F","C","S"],
-    ["A","D","E","E"]
-]
-print(exist(grid, "ABCCED"))  # True
-print(exist(grid, "SEE"))     # True
-print(exist(grid, "ABCB"))    # False
-
-
-
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
-
-print(factorial(5))
-
-def fibonacci(n):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
-    return fibonacci(n - 1) + fibonacci(n - 2)
-
-print(fibonacci(6))
+# grid = [
+#     ["A","B","C","E"],
+#     ["S","F","C","S"],
+#     ["A","D","E","E"]
+# ]
+# print(exist(grid, "ABCCED"))  # True
+# print(exist(grid, "SEE"))     # True
+# print(exist(grid, "ABCB"))    # False
 
 
-def longest_unique_substring(s):
-    seen = set()
-    left = 0
-    max_len = 0
 
-    for right in range(len(s)):
-        while s[right] in seen:
-            seen.remove(s[left])
-            left += 1
+# def factorial(n):
+#     if n == 0 or n == 1:
+#         return 1
+#     return n * factorial(n - 1)
 
-        seen.add(s[right])
-        max_len = max(max_len, right - left + 1)
+# print(factorial(5))
 
-    return max_len
+# def fibonacci(n):
+#     if n == 0:
+#         return 0
+#     if n == 1:
+#         return 1
+#     return fibonacci(n - 1) + fibonacci(n - 2)
 
-
-print(longest_unique_substring("abcabcbb"))  # Output: 3
-
-
-# Problem:
-# Array of size n-1 contains numbers from 1 to n. One number is missing.
-
-def missing_number(arr, n):
-    total = n * (n + 1) // 2
-    return total - sum(arr)
+# print(fibonacci(6))
 
 
-arr = [1, 2, 4, 5, 6]
-print(missing_number(arr, 6))  # Output: 3
+# def longest_unique_substring(s):
+#     seen = set()
+#     left = 0
+#     max_len = 0
 
-def is_balanced(s):
-    stack = []
-    pairs = {')': '(', '}': '{', ']': '['}
+#     for right in range(len(s)):
+#         while s[right] in seen:
+#             seen.remove(s[left])
+#             left += 1
 
-    for char in s:
-        if char in "({[":
-            stack.append(char)
-        elif char in ")}]":
-            if not stack or stack.pop() != pairs[char]:
-                return False
+#         seen.add(s[right])
+#         max_len = max(max_len, right - left + 1)
 
-    return len(stack) == 0
-
-
-print(is_balanced("{[()]}"))  # True
-print(is_balanced("{[(])}"))  # False
-
-def binary_search(arr, low, high, key):
-    if low > high:
-        return -1
-
-    mid = (low + high) // 2
-
-    if arr[mid] == key:
-        return mid
-    elif arr[mid] > key:
-        return binary_search(arr, low, mid - 1, key)
-    else:
-        return binary_search(arr, mid + 1, high, key)
+#     return max_len
 
 
-arr = [1, 3, 5, 7, 9]
-print(binary_search(arr, 0, len(arr) - 1, 7))
-
-class LRUCache:
-    def __init__(self, capacity):
-        self.capacity = capacity
-        self.cache = {}
-
-    def get(self, key):
-        if key not in self.cache:
-            return -1
-        value = self.cache.pop(key)
-        self.cache[key] = value
-        return value
-
-    def put(self, key, value):
-        if key in self.cache:
-            self.cache.pop(key)
-        elif len(self.cache) >= self.capacity:
-            self.cache.pop(next(iter(self.cache)))
-        self.cache[key] = value
+# print(longest_unique_substring("abcabcbb"))  # Output: 3
 
 
-def merge_intervals(intervals):
-    intervals.sort()
-    result = [intervals[0]]
+# # Problem:
+# # Array of size n-1 contains numbers from 1 to n. One number is missing.
 
-    for start, end in intervals[1:]:
-        last_end = result[-1][1]
-        if start <= last_end:
-            result[-1][1] = max(last_end, end)
-        else:
-            result.append([start, end])
-
-    return result
+# def missing_number(arr, n):
+#     total = n * (n + 1) // 2
+#     return total - sum(arr)
 
 
-print(merge_intervals([[1,3],[2,6],[8,10],[15,18]]))
+# arr = [1, 2, 4, 5, 6]
+# print(missing_number(arr, 6))  # Output: 3
+
+# def is_balanced(s):
+#     stack = []
+#     pairs = {')': '(', '}': '{', ']': '['}
+
+#     for char in s:
+#         if char in "({[":
+#             stack.append(char)
+#         elif char in ")}]":
+#             if not stack or stack.pop() != pairs[char]:
+#                 return False
+
+#     return len(stack) == 0
 
 
-def word_frequency(text):
-    freq = {}
+# print(is_balanced("{[()]}"))  # True
+# print(is_balanced("{[(])}"))  # False
 
-    for word in text.split():
-        freq[word] = freq.get(word, 0) + 1
+# def binary_search(arr, low, high, key):
+#     if low > high:
+#         return -1
 
-    return freq
+#     mid = (low + high) // 2
+
+#     if arr[mid] == key:
+#         return mid
+#     elif arr[mid] > key:
+#         return binary_search(arr, low, mid - 1, key)
+#     else:
+#         return binary_search(arr, mid + 1, high, key)
 
 
-print(word_frequency("python is easy and python is powerful"))
-def is_valid_sudoku(board):
-    seen = set()
+# arr = [1, 3, 5, 7, 9]
+# print(binary_search(arr, 0, len(arr) - 1, 7))
 
-    for i in range(9):
-        for j in range(9):
-            num = board[i][j]
-            if num != '.':
-                if (i, num) in seen or (num, j) in seen or (i//3, j//3, num) in seen:
-                    return False
-                seen.add((i, num))
-                seen.add((num, j))
-                seen.add((i//3, j//3, num))
-    return True
+# class LRUCache:
+#     def __init__(self, capacity):
+#         self.capacity = capacity
+#         self.cache = {}
+
+#     def get(self, key):
+#         if key not in self.cache:
+#             return -1
+#         value = self.cache.pop(key)
+#         self.cache[key] = value
+#         return value
+
+#     def put(self, key, value):
+#         if key in self.cache:
+#             self.cache.pop(key)
+#         elif len(self.cache) >= self.capacity:
+#             self.cache.pop(next(iter(self.cache)))
+#         self.cache[key] = value
+
+
+# def merge_intervals(intervals):
+#     intervals.sort()
+#     result = [intervals[0]]
+
+#     for start, end in intervals[1:]:
+#         last_end = result[-1][1]
+#         if start <= last_end:
+#             result[-1][1] = max(last_end, end)
+#         else:
+#             result.append([start, end])
+
+#     return result
+
+
+# print(merge_intervals([[1,3],[2,6],[8,10],[15,18]]))
+
+
+# def word_frequency(text):
+#     freq = {}
+
+#     for word in text.split():
+#         freq[word] = freq.get(word, 0) + 1
+
+#     return freq
+
+
+# print(word_frequency("python is easy and python is powerful"))
+# def is_valid_sudoku(board):
+#     seen = set()
+
+#     for i in range(9):
+#         for j in range(9):
+#             num = board[i][j]
+#             if num != '.':
+#                 if (i, num) in seen or (num, j) in seen or (i//3, j//3, num) in seen:
+#                     return False
+#                 seen.add((i, num))
+#                 seen.add((num, j))
+#                 seen.add((i//3, j//3, num))
+#     return True
