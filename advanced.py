@@ -95,3 +95,45 @@ class Developer(Employee):
 
 emp = Developer()
 print(emp.salary())
+def fib(n, memo={}):
+    if n in memo:
+        return memo[n]
+    if n <= 1:
+        return n
+    memo[n] = fib(n-1) + fib(n-2)
+    return memo[n]
+
+print(fib(10))
+import re
+
+def check_password(password):
+    if (len(password) >= 8 and
+        re.search("[A-Z]", password) and
+        re.search("[a-z]", password) and
+        re.search("[0-9]", password)):
+        return "Strong Password"
+    return "Weak Password"
+
+print(check_password("Python123"))
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+rotated = list(zip(*matrix[::-1]))
+print(rotated)
+tasks = []
+
+while True:
+    print("1.Add 2.View 3.Delete 4.Exit")
+    choice = input("Choose: ")
+
+    if choice == "1":
+        tasks.append(input("Task: "))
+    elif choice == "2":
+        print(tasks)
+    elif choice == "3":
+        tasks.pop(int(input("Index: ")))
+    elif choice == "4":
+        break
