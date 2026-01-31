@@ -323,51 +323,51 @@
 #         self.cache[key] = value
 #         return value
 
-#     def put(self, key, value):
-#         if key in self.cache:
-#             self.cache.pop(key)
-#         elif len(self.cache) >= self.capacity:
-#             self.cache.pop(next(iter(self.cache)))
-#         self.cache[key] = value
+    def put(self, key, value):
+        if key in self.cache:
+            self.cache.pop(key)
+        elif len(self.cache) >= self.capacity:
+            self.cache.pop(next(iter(self.cache)))
+        self.cache[key] = value
 
 
-# def merge_intervals(intervals):
-#     intervals.sort()
-#     result = [intervals[0]]
+def merge_intervals(intervals):
+    intervals.sort()
+    result = [intervals[0]]
 
-#     for start, end in intervals[1:]:
-#         last_end = result[-1][1]
-#         if start <= last_end:
-#             result[-1][1] = max(last_end, end)
-#         else:
-#             result.append([start, end])
+    for start, end in intervals[1:]:
+        last_end = result[-1][1]
+        if start <= last_end:
+            result[-1][1] = max(last_end, end)
+        else:
+            result.append([start, end])
 
-#     return result
-
-
-# print(merge_intervals([[1,3],[2,6],[8,10],[15,18]]))
+    return result
 
 
-# def word_frequency(text):
-#     freq = {}
-
-#     for word in text.split():
-#         freq[word] = freq.get(word, 0) + 1
-
-#     return freq
+print(merge_intervals([[1,3],[2,6],[8,10],[15,18]]))
 
 
-# print(word_frequency("python is easy and python is powerful"))
-# def is_valid_sudoku(board):
-#     seen = set()
+def word_frequency(text):
+    freq = {}
 
-#     for i in range(9):
-#         for j in range(9):
-#             num = board[i][j]
-#             if num != '.':
-#                 if (i, num) in seen or (num, j) in seen or (i//3, j//3, num) in seen:
-#                     return False
-#                 seen.add((i, num))
-#                 seen.add((num, j))
-#                 seen.add((i//3, j//3, num))
-#     return True
+    for word in text.split():
+        freq[word] = freq.get(word, 0) + 1
+
+    return freq
+
+
+print(word_frequency("python is easy and python is powerful"))
+def is_valid_sudoku(board):
+    seen = set()
+
+    for i in range(9):
+        for j in range(9):
+            num = board[i][j]
+            if num != '.':
+                if (i, num) in seen or (num, j) in seen or (i//3, j//3, num) in seen:
+                    return False
+                seen.add((i, num))
+                seen.add((num, j))
+                seen.add((i//3, j//3, num))
+    return True
