@@ -79,3 +79,19 @@ except FileNotFoundError:
     print("File not found")
 finally:
     print("Program finished")
+def even_numbers(n):
+    for i in range(2, n + 1, 2):
+        yield i
+
+for num in even_numbers(10):
+    print(num)
+class Employee:
+    def salary(self):
+        return 20000
+
+class Developer(Employee):
+    def salary(self):
+        return 50000
+
+emp = Developer()
+print(emp.salary())
