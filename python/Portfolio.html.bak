@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohd Zunaid | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #0f0f0f; color: #fff; }
+    header { padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); }
+    header h2 { font-size: 24px; }
+    nav a { margin-left: 25px; text-decoration: none; color: #fff; font-size: 16px; transition: 0.3s; }
+    nav a:hover { color: #00eaff; }
+
+    section { padding: 120px 50px; }
+
+    #home { height: 100vh; display: flex; flex-direction: column; justify-content: center; animation: fadeIn 1.5s ease; }
+    #home h1 { font-size: 48px; margin-bottom: 10px; }
+    #home p { font-size: 18px; opacity: 0.8; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html></body>  </section>    </form>      <button>Send Message</button>      <textarea rows="4" placeholder="Message"></textarea>      <input type="email" placeholder="Your Email" />      <input type="text" placeholder="Your Name" />    <form>    <h2>Contact Me</h2>
+n  <section id="contact">  </section>    </div>      <div class="project">Project 3 — Web UI Design</div>      <div class="project">Project 2 — Calculator App</div>      <div class="project">Project 1 — Portfolio Website</div>      <!-- जो LinkedIn में project लिखा है, उसे copy करो और हर एक project के लिए एक card बनाओ -->    <div class="proj-grid">    <h2>Projects</h2>
+n  <section id="projects">  </section>    </div>      <div class="skill">C</div>      <div class="skill">Python</div>      <div class="skill">JavaScript</div>      <div class="skill">CSS</div>      <div class="skill">HTML</div>      <!-- LinkedIn skills में जो-जो skill हैं, उन्हें यहाँ अलग अलग div में लिखो -->    <div class="skill-box">    <h2>Skills</h2>
+n  <section id="skills">  </section>    </p>      मैं एक छात्र हूँ और मुझे वेब विकास और आधुनिक UI डिजाइन में बहुत रुचि है। मैंने अपने कॉलेज असाइनमेंट्स और छोटे प्रोजेक्ट्स में HTML, CSS, और JavaScript का उपयोग किया है। मेरा मकसद भविष्य में सॉफ़्टवेयर / वेब डेवलपमेंट में और गहराई से काम करना है。      <!-- LinkedIn “About” या summary यहाँ paste करो -->    <p>    <h2>About Me</h2>
+n  <section id="about">  </section>    <p><!-- LinkedIn headline यहाँ लिखो, जैसे “Engineering Student / Web Developer / …” --></p>    <h1>Hi, I'm Mohd Zunaid</h1>
+n  <section id="home">  </header>    </nav>      <a href="#contact">Contact</a>      <a href="#projects">Projects</a>      <a href="#skills">Skills</a>      <a href="#about">About</a>      <a href="#home">Home</a>    <nav>    <h2>Mohd Zunaid</h2>  <header><body></head>  </style>    button { padding: 12px; background: #00eaff; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; }    input, textarea { padding: 12px; background: #1a1a1a; border: 1px solid #333; color: white; border-radius: 6px; }    form { max-width: 400px; display: flex; flex-direction: column; gap: 15px; }
+n    #contact h2 { margin-bottom: 20px; font-size: 32px; }    .project:hover { border-color: #00eaff; transform: scale(1.03); }    .project { background: #1d1d1d; padding: 20px; border-radius: 8px; border: 1px solid #333; transition: 0.3s; }    .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+n    #projects h2 { margin-bottom: 20px; font-size: 32px; }    .skill:hover { border-color: #00eaff; transform: translateY(-4px); }    .skill { background: #1c1c1c; padding: 12px 20px; border-radius: 8px; border: 1px solid #333; transition: 0.3s; }    .skill-box { display: flex; gap: 20px; flex-wrap: wrap; }
+n    #skills h2 { margin-bottom: 20px; font-size: 32px; }    #about p { line-height: 1.6; max-width: 700px; }    #about h2 { margin-bottom: 15px; font-size: 32px; }    #about { background: #181818; border-radius: 10px; }n    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
