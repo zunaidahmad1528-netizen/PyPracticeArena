@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "total_revenue": 209200,
+    "average_sale": 23244.44,
+    "median_sale": 9200,
+    "average_rating": 4.33,
+    "leading_category": "Electronics",
+    "high_value_orders": 5,
+    "top_3_products": [
+      {
+        "product": "Laptop",
+        "revenue": 160000.0
+      },
+      {
+        "product": "Office Chair",
+        "revenue": 24300.0
+      },
+      {
+        "product": "Headphones",
+        "revenue": 17700.0
+      }
+    ],
+    "revenue_by_category": {
+      "Electronics": 177700.0,
+      "Furniture": 27500.0,
+      "Books": 4000.0
+    }
+  },
+  "orders": [
+    {
+      "customer": "Aisha",
+      "product": "Laptop",
+      "category": "Electronics",
+      "amount": 78000,
+      "rating": 5
+    },
+    {
+      "customer": "Bilal",
+      "product": "Headphones",
+      "category": "Electronics",
+      "amount": 8500,
+      "rating": 4
+    },
+    {
+      "customer": "Sara",
+      "product": "Python Book",
+      "category": "Books",
+      "amount": 1800,
+      "rating": 5
+    },
+    {
+      "customer": "Hamza",
+      "product": "Office Chair",
+      "category": "Furniture",
+      "amount": 12500,
+      "rating": 4
+    },
+    {
+      "customer": "Noor",
+      "product": "Laptop",
+      "category": "Electronics",
+      "amount": 82000,
+      "rating": 5
+    },
+    {
+      "customer": "Ali",
+      "product": "Python Book",
+      "category": "Books",
+      "amount": 2200,
+      "rating": 4
+    },
+    {
+      "customer": "Hina",
+      "product": "Desk Lamp",
+      "category": "Furniture",
+      "amount": 3200,
+      "rating": 3
+    },
+    {
+      "customer": "Omar",
+      "product": "Headphones",
+      "category": "Electronics",
+      "amount": 9200,
+      "rating": 4
+    },
+    {
+      "customer": "Zoya",
+      "product": "Office Chair",
+      "category": "Furniture",
+      "amount": 11800,
+      "rating": 5
+    }
+  ]
+}

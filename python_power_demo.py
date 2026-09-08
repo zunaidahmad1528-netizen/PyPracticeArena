@@ -70,8 +70,9 @@ class SalesAnalyzer:
         print(f"Total revenue   : Rs. {self.total_revenue:,.2f}")
         print(f"Average rating  : {self.insights['average_rating']}/5")
         print("\nRevenue by category")
+        largest_revenue = max(self.revenue_by_category.values())
         for category, revenue in self.revenue_by_category.items():
-            bar = "#" * int(revenue / 1000)
+            bar = "#" * max(1, round(revenue / largest_revenue * 30))
             print(f"  {category:<12} Rs. {revenue:>8,.2f}  {bar}")
 
         print("\nTop products")
