@@ -1,250 +1,86 @@
-i = 1
-while i<=5:
-  
-    print("hello")
-#     i += 1
-i = 5
-while i >= 1:
-#     print(i)
-#     i -= 1
+"""Loop practice and a small menu-driven scientific calculator."""
 
-i = 1
-while i <= 10:
-    print(i)
-    i = i + 1
-      
-      
-i = 10 
-while i >= 1:
-    print(i)
-    i -= 1
+import math
 
 
-i = 1
-while i <= 100:
-    print(i)
-    i += 1
+def get_number(prompt):
+    """Read a number and keep asking until the input is valid."""
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Please enter a valid number.")
 
 
-i = 100 
-while i >= 1:
-    print(i)
-    i -= 1
-n = int(input("enter a number :"))
-i = 1 
-while i <= 10:
-    print(i*n)
-    i += 1
+def show_menu():
+    print("\n--- Scientific Calculator ---")
+    print("1. Add                 7. Square root")
+    print("2. Subtract            8. Power")
+    print("3. Multiply            9. Sine (degrees)")
+    print("4. Divide             10. Cosine (degrees)")
+    print("5. Modulus            11. Tangent (degrees)")
+    print("6. Factorial          12. Logarithm")
+    print("13. Constants (pi, e) 0. Exit")
 
-i = 1
-while i <= 10:
-    print(i*i)
-    i += 1
 
-heros = ["spider" , "ironman", "thor", "hulk", "captain america"]
-x = "hulk"
-ind = 0 
-while ind < len(heros):
-    if (heros[ind] == x):
-        print("found hulk")
-        break
-    else:
-        print("findind...")
-    ind += 1
-    num  = [1,2,3,4,5,6,7,8,9,10]
-x =  4
-inx = 0
-while inx < len(num):
-    if (num[inx] == x):
-        print("found")
-        break    
-    else:
-#         print("not found")
-        inx += 1 
-        
-i = 0 
-while i <= 5:
-        if (i == 3):
-         i +=1
-         continue
-        print(i)
-        i += 1
-break
+def scientific_calculator():
+    """Run the calculator until the user chooses Exit."""
+    while True:
+        show_menu()
+        choice = input("Choose an operation: ").strip()
 
-for i in range(34):
-        if (i==30):
-         break
-        print(i)
-        
-        
-# continue 
-for  i in range(12):
-        if i==0:
-                continue
-#         print(i)
-i = 0
-while i <= 12:
-        i += 1
-        if i==6:
-                continue
-        elif i==8:
-                continue
-        
-        if i==11:
+        try:
+            if choice == "0":
+                print("Calculator closed.")
                 break
-        print(i)  
-
-# for loop 
-for i in range(10):
-        print(i)
-for i in range(1,11):
-        print(i)
-        
-for i in range(1,21,2):
-        print(i)
-
-# with python 
-
-fuirt = ["apple", "banana", "mango", "grapes"]
-for i in fuirt:
-        print(i)
-
-# with string
-name  = "mohd zunaid"
-print(len(name))
-for i in name:
-        print(i)
-       
-       
-colour = ["red", "green", "blue", "yellow"]
-for index, i in  enumerate(colour):
-        print(index, i)
-
-for i in range(1, 11):
-        for j in range(1,11):
-                print(i, j)
-       
-         whike loop 
-i = 0
-while i< 5:
-        i += 1
-        print(i)
-
-i = 2 
-while i <=10:
-        print(i)
-        i += 2
-else:
-        print("loop is ended")
-        
-        for i in range(1,11):
-                if i==5:
-                 continue 
-                elif i ==6:
-                        continue
-                if i==9:
-                        break
-                
-        print(i)
-
-
-str = "mohdzunaid"
-for i in str:
-         if (i=='i'):
-                 break
-         print(i)
-         
-print("END loop")
-
-str = "mohdzunaid"
-for i in str:
-         if (i=='i'):
+            if choice in {"1", "2", "3", "4", "5", "8"}:
+                first = get_number("Enter first number: ")
+                second = get_number("Enter second number: ")
+                if choice == "1":
+                    result = first + second
+                elif choice == "2":
+                    result = first - second
+                elif choice == "3":
+                    result = first * second
+                elif choice == "4":
+                    result = first / second
+                elif choice == "5":
+                    result = first % second
+                else:
+                    result = first**second
+            elif choice == "6":
+                number = get_number("Enter a non-negative whole number: ")
+                if number < 0 or not number.is_integer():
+                    raise ValueError("factorial needs a non-negative whole number")
+                result = math.factorial(int(number))
+            elif choice == "7":
+                number = get_number("Enter a number: ")
+                result = math.sqrt(number)
+            elif choice in {"9", "10", "11"}:
+                angle = get_number("Enter angle in degrees: ")
+                radians = math.radians(angle)
+                if choice == "9":
+                    result = math.sin(radians)
+                elif choice == "10":
+                    result = math.cos(radians)
+                else:
+                    result = math.tan(radians)
+            elif choice == "12":
+                number = get_number("Enter a positive number: ")
+                base = get_number("Enter log base (for example, 10): ")
+                result = math.log(number, base)
+            elif choice == "13":
+                print(f"pi = {math.pi}")
+                print(f"e  = {math.e}")
                 continue
-         print(i)
-         
-print("END loop")
-# pratice question
-
- 
-# list = [1,4,9,16,25,36,49,64,81,100]
-# for i in list:
-#         if
-
-# i = 0
-# while i<10:
-#         i +=1
-#         print(i*i)
-# list = []
-# print(list)
-        
-        
-list = [1,4,9,16,25,36,49,64,81,100]
-x = int(input("enter A number :"))
-for i in list:
-        if (i==x):
-                print("found x here" )
+            else:
+                print("Please choose a number from 0 to 13.")
                 continue
-        print(i)
-        
-list = [1,4,9,16,25,36,49,64,81,100]
-x = int(input("enter A number :"))
-for i in list:
-        if (i==x):
-                print("found x here")
-                break
-        print(i)
 
-for i in range(1,101):
-        print(i)
-        
-        
-for i in range(101,0, -1):
-        print(i)
-
-n = int(input("enter a number ;"))
-for i in range (1,11,1):
-        print(i*n)
+            print(f"Result: {result:g}")
+        except (ValueError, ZeroDivisionError):
+            print("That calculation is not valid. Check the values and try again.")
 
 
-for i in range(5):
-        pass
-if i==3:
-        pass
-        
-        
-# print("some important code")
-
-
-# n = int(input("enter a number :"))
-# sum = 0
-# for i in range(1,n+1):
-#         sum += i
-#         print(sum)
-       
-n = int(input("enter a number :"))  
-sum = 0 
-i = 1
-
-while i <= n:
-        i += 1
-        sum += i 
-        print(sum)
-         
-         
-         
-         
-n = 5
-fac = 1
-i = 1
-
-while i <= n:
-        i += 1
-        fac *= i 
-       
-        print(fac)
-
-fac = 1
-n = int(input("enter a number :"))
-for i in range(1,n+1):
-        fac *= i 
-        print(fac)
+if __name__ == "__main__":
+    scientific_calculator()
