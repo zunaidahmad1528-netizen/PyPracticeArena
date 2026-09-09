@@ -3,7 +3,9 @@
 from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass
 from functools import cached_property
+import ast
 import json
+import math
 from statistics import mean, median
 
 
@@ -92,7 +94,87 @@ class SalesAnalyzer:
         print(f"\nJSON report saved to {filename}")
 
 
-def main() -> None:
+class ScientificCalculator:
+    """Evaluate common scientific calculator expressions without using eval()."""
+
+    FUNCTIONS = {
+        name: getattr(math, name)
+        for name in (
+            "acos", "asin", "atan", "ceil", "cos", "degrees", "exp",
+            "floor", "log", "log10", "radians", "sin", "sqrt", "tan",
+        )
+    }
+    FUNCTIONS["abs"] = abs
+    FUNCTIONS["factorial"] = math.factorial
+    CONSTANTS = {"e": math.e, "pi": math.pi, "tau": math.tau}
+
+    def calculate(self, expression: str) -> float | int:
+        try:
+            tree = ast.parse(expression, mode="eval")
+            result = self._evaluate(tree.body)
+        except (SyntaxError, ValueError, TypeError, ZeroDivisionError, OverflowError) as error:
+            raise ValueError(f"Invalid expression: {error}") from error
+
+        if isinstance(result, float) and result.is_integer():
+            return int(result)
+        return result
+
+    def _evaluate(self, node: ast.AST) -> float | int:
+        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
+            return node.value
+        if isinstance(node, ast.Name) and node.id in self.CONSTANTS:
+            return self.CONSTANTS[node.id]
+        if isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.UAdd, ast.USub)):
+            value = self._evaluate(node.operand)
+            return value if isinstance(node.op, ast.UAdd) else -value
+        if isinstance(node, ast.BinOp) and type(node.op) in {
+            ast.Add, ast.Sub, ast.Mult, ast.Div, ast.Pow, ast.Mod, ast.FloorDiv,
+        }:
+            left = self._evaluate(node.left)
+            right = self._evaluate(node.right)
+            operations = {
+                ast.Add: lambda: left + right,
+                ast.Sub: lambda: left - right,
+                ast.Mult: lambda: left * right,
+                ast.Div: lambda: left / right,
+                ast.Pow: lambda: left ** right,
+                ast.Mod: lambda: left % right,
+                ast.FloorDiv: lambda: left // right,
+            }
+            return operations[type(node.op)]()
+        if isinstance(node, ast.Call) and isinstance(node.func, ast.Name):
+            if node.func.id not in self.FUNCTIONS or node.keywords:
+                raise ValueError("Function is not supported")
+            arguments = [self._evaluate(argument) for argument in node.args]
+            return self.FUNCTIONS[node.func.id](*arguments)
+        raise ValueError("Only numbers, operators, constants, and supported functions are allowed")
+
+    def run(self) -> None:
+        print("\nSCIENTIFIC CALCULATOR")
+        print("Examples: 2 ** 8, sqrt(144), sin(pi / 2), log10(1000)")
+        print("Type 'help' for functions or 'quit' to exit.\n")
+        while True:
+            try:
+                expression = input("calc> ").strip()
+            except EOFError:
+                print()
+                break
+            if expression.lower() in {"quit", "exit", "q"}:
+                print("Goodbye!")
+                break
+            if expression.lower() == "help":
+                print("Functions: " + ", ".join(sorted(self.FUNCTIONS)))
+                print("Constants: e, pi, tau | Operators: + - * / // % **")
+                continue
+            if not expression:
+                continue
+            try:
+                print(f"= {self.calculate(expression)}")
+            except ValueError as error:
+                print(f"Error: {error}")
+
+
+def run_sales_demo() -> None:
     sales = [
         Sale("Aisha", "Laptop", "Electronics", 78000, 5),
         Sale("Bilal", "Headphones", "Electronics", 8500, 4),
@@ -108,6 +190,15 @@ def main() -> None:
     analyzer = SalesAnalyzer(sales)
     analyzer.print_dashboard()
     analyzer.export_report()
+
+
+def main() -> None:
+    import sys
+
+    if "--sales" in sys.argv:
+        run_sales_demo()
+    else:
+        ScientificCalculator().run()
 
 
 if __name__ == "__main__":
