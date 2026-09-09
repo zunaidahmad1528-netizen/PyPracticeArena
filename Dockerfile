@@ -1,4 +1,6 @@
-FROM ubuntu:latest
-LABEL authors="Legion"
+FROM python:3.12-slim
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+COPY . .
+
+CMD ["python", "python_power_demo.py"]
