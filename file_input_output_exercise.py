@@ -1,37 +1,22 @@
-f = open("calculator.c" , "r")
-data = f.read()
-print(data)
-print(type(data))
-f.close()
-
-f = open("calculator.c" , "r")
-data = f.read(5)
-print(data)
-print(type(data))
-f.close
-f = open("calculator.c" , "r")
-data = f.readline()
-print(data)
-print(type(data))()
-
-f = open("calculator.c" , "w+")
-data = f.write("hello mohd zunaid we are replacing your file frome this to this file")
-print(data)
-print(type(data))
-f.close()
+from pathlib import Path
 
 
-f = open("calculator.c", "r")
-line1 = f.readline()
-print(line1)
+file_path = Path("calculator.txt")
+sample_text = "Hello, Python file I/O!\nThis file was created by the exercise.\n"
 
+with file_path.open("w", encoding="utf-8") as file:
+	characters_written = file.write(sample_text)
 
+print(f"Wrote {characters_written} characters to {file_path}")
 
-line2 = f.readline()
-print(line2)
-f.close()
+with file_path.open("r", encoding="utf-8") as file:
+	contents = file.read()
 
-f = open("calculator.c", "w")
-data = f.write("hello mohd zunaid this is your new file")
-print(data)
-f.close()
+print("Full file contents:")
+print(contents)
+print(f"Data type: {type(contents).__name__}")
+
+with file_path.open("r", encoding="utf-8") as file:
+	first_line = file.readline().strip()
+
+print(f"First line: {first_line}")
