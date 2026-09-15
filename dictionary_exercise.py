@@ -51,3 +51,23 @@ print("ysyuyh")
 student.update({"name2" : "mohd rihan"})
 print(student)
 
+# useful dictionary operations
+print("name" in student)
+print("email" in student)
+
+student.setdefault("email", "zunaid@example.com")
+print(student)
+
+removed_value = student.pop("name2")
+print("Removed:", removed_value)
+print(student)
+
+# loop through dictionary keys and values
+for key, value in info.items():
+    print(f"{key}: {value}")
+
+# find the highest score
+highest_subject = max(student["scores"], key=student["scores"].get)
+highest_score = student["scores"][highest_subject]
+print(f"Highest score: {highest_subject} = {highest_score}")
+
