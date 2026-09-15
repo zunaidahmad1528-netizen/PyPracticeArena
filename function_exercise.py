@@ -310,3 +310,79 @@ def print_list(list,inx = 0):
 li = [1,2,3,4,5]
     
 print_list(li)
+
+list = [1,2,3,4,5]
+def print_list(list):
+    if len(list) == 0:
+        return
+    else:
+        print(list)
+        
+print_list(list)
+
+def print_list(list,inx = 0):
+    if (inx == len(list)):
+        return
+    
+    print(list[inx])
+    print_list(list, inx + 1)
+li = [1,2,3,4,5]
+    
+print_list(li)
+
+list = [1,2,3,4,5]
+def print_list(list):
+    if len(list) == 0:
+        return
+    else:
+        print(list)
+        
+print_list(list)
+
+def print_list(list,inx = 0):
+    if (inx == len(list)):
+        return
+    
+    print(list[inx])
+    print_list(list, inx + 1)
+li = [1,2,3,4,5]
+    
+print_list(li)
+
+list = [1,2,3,4,5]
+def print_list(list):
+    if len(list) == 0:
+        return
+    else:
+        print(list)
+        
+print_list(list)
+
+def print_list(list,inx = 0):
+    if (inx == len(list)):
+        return
+    
+    print(list[inx])
+    print_list(list, inx + 1)
+li = [1,2,3,4,5]
+    
+print_list(li)
+
+list = [1,2,3,4,5]
+def print_list(list):
+    if len(list) == 0:
+        return
+    else:
+        print(list)
+        
+print_list(list)
+
+def print_list(list,inx = 0):
+    if (inx == len(list)):
+        return
+    
+    print(list[inx])
+    print_list(list, inx + 1)
+li = [1,2,3,4,5]
+    
+print_list(li)
