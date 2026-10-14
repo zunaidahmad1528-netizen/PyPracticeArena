@@ -117,9 +117,13 @@ def validate_records(records: list[dict[str, Any]]) -> list[str]:
     return errors
 
 
-def save_csv(records: list[dict[str, Any]], filename: str = "clean_customers.csv") -> Path:
+def save_csv(
+    records: list[dict[str, Any]],
+    filename: str | Path = Path("data/output/clean_customers.csv"),
+) -> Path:
     """Export cleaned records to a CSV file."""
     output_path = Path(filename)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=records[0].keys())
         writer.writeheader()

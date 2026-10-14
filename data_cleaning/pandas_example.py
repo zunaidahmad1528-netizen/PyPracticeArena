@@ -1,6 +1,8 @@
 # Data Cleaning using Pandas
 # This script reads a small dataset, cleans it, removes duplicates, and saves cleaned CSV.
 
+from pathlib import Path
+
 import pandas as pd
 
 # Sample raw data
@@ -51,6 +53,7 @@ print("Cleaned DataFrame:")
 print(df)
 
 # Save cleaned data to CSV
-output_file = 'cleaned_data_pandas.csv'
+output_file = Path('data/output/cleaned_data_pandas.csv')
+output_file.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(output_file, index=False)
 print(f"\nCleaned data saved to {output_file}")

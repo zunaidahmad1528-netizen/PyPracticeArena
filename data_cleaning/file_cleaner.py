@@ -73,7 +73,7 @@ def clean_dataframe(df):
 def main():
     parser = argparse.ArgumentParser(description='Clean messy Excel/CSV data using pandas.')
     parser.add_argument('input_file', help='Path to the Excel or CSV file to clean')
-    parser.add_argument('--output', '-o', default=None, help='Output file name. Default: cleaned_<input>.xlsx')
+    parser.add_argument('--output', '-o', default=None, help='Output file name. Default: data/output/cleaned_<input>.xlsx')
     args = parser.parse_args()
 
     input_path = Path(args.input_file)
@@ -98,7 +98,9 @@ def main():
     if args.output:
         output_path = Path(args.output)
     else:
-        output_path = input_path.with_name(f"cleaned_{input_path.stem}.xlsx")
+        output_path = Path("data/output") / f"cleaned_{input_path.stem}.xlsx"
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
 
     if output_path.suffix.lower() == '.csv':
         cleaned_df.to_csv(output_path, index=False)

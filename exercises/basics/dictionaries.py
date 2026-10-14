@@ -1,73 +1,31 @@
-info = {
-    "firstname" : "mohd",
-    "last name" : "zunaid",
-    "age" : 22, 
-    "city" : "utter pradesh",
-    "country" : "india",
-    "is_married" : False,
-    "skills" : ["c", "c++", "python", "java", "html", "css", "javascript"],
-    12 : 3.3,
-    3.2 : "hello",
-    "list" : [1,2,3,4,5,6],
-    "tuple" : (1,2,3,4,5,6),
-    
-}
-print(info)
+"""Practice dictionary creation, access, updates, and iteration."""
 
-info["firstname"] = "mohd zunaid"
-info["age"] = 19
-print(info)
 
-null_dict = {}
-null_dict["name"] = "mohd zunaid"
-print(null_dict)
+def main() -> None:
+    student = {
+        "name": "Aisha Khan",
+        "age": 20,
+        "city": "Lucknow",
+        "skills": ["Python", "SQL"],
+        "scores": {"math": 80, "science": 88, "english": 70},
+    }
 
-# nested dictionary
+    print("Name:", student["name"])
+    print("Missing key:", student.get("email", "not provided"))
+    student["age"] = 21
+    student.setdefault("email", "aisha@example.com")
+    student["skills"].append("Git")
 
-student = {
-    "name" : "mohd zunaid",
-        "scores" : { 
-            "math" : 80,
-            "science" : 88,
-            "english" : 70,
-            
-                 }
-}
-print(student['scores']["math"])
-print(student.keys())
-print(list(student.keys()))
-print(type(student.keys()))
-print(len(student))
-print(len((student.keys())))
+    print("Keys:", list(student.keys()))
+    print("Values:", list(student.values()))
+    for key, value in student.items():
+        print(f"{key}: {value}")
 
-print(list(student.values()))
+    scores = student["scores"]
+    highest_subject = max(scores, key=scores.get)
+    print(f"Highest score: {highest_subject} = {scores[highest_subject]}")
 
-print(list(student.items()))
-pairs = list(student.items())
-print(pairs[1])
-print(student.get("name6"))
-print("ysyuyh")
 
-student.update({"name2" : "mohd rihan"})
-print(student)
-
-# useful dictionary operations
-print("name" in student)
-print("email" in student)
-
-student.setdefault("email", "zunaid@example.com")
-print(student)
-
-removed_value = student.pop("name2")
-print("Removed:", removed_value)
-print(student)
-
-# loop through dictionary keys and values
-for key, value in info.items():
-    print(f"{key}: {value}")
-
-# find the highest score
-highest_subject = max(student["scores"], key=student["scores"].get)
-highest_score = student["scores"][highest_subject]
-print(f"Highest score: {highest_subject} = {highest_score}")
+if __name__ == "__main__":
+    main()
 

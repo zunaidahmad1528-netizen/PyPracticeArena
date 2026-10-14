@@ -2,7 +2,9 @@ from pathlib import Path
 
 
 def main():
-	file_path = Path("calculator.txt")
+	repository_root = Path(__file__).resolve().parents[2]
+	file_path = repository_root / "data" / "output" / "file_io_example.txt"
+	file_path.parent.mkdir(parents=True, exist_ok=True)
 	sample_text = "Hello, Python file I/O!\nThis file was created by the exercise.\n"
 
 	with file_path.open("w", encoding="utf-8") as file:
