@@ -25,5 +25,5 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Compile main demo
-        run: python -m py_compile python_power_demo.py
+      - name: Compile Python examples
+        run: python -m compileall -q exercises data_cleaning projects questions

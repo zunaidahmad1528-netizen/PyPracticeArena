@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 
 WORKDIR /app
-COPY . .
+COPY projects/ ./projects/
 
-CMD ["python", "python_power_demo.py"]
+CMD ["python", "projects/scientific_calculator.py"]
