@@ -19,7 +19,7 @@ df = pd.DataFrame(raw_data)
 
 # 1. Remove extra spaces
 for col in df.columns:
-    if df[col].dtype == 'object':
+    if pd.api.types.is_object_dtype(df[col]) or pd.api.types.is_string_dtype(df[col].dtype):
         df[col] = df[col].astype(str).str.strip()
 
 # 2. Standardize text columns
@@ -46,8 +46,7 @@ if 'City' in df.columns:
 if {'Name', 'Email'}.issubset(df.columns):
     df = df.drop_duplicates(subset=['Name', 'Email'], keep='first')
 
-# 6. Reset index
-# df = df.reset_index(drop=True)
+df = df.reset_index(drop=True)
 
 print("Cleaned DataFrame:")
 print(df)
