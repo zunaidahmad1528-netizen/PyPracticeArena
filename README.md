@@ -1,76 +1,28 @@
-# PyPracticeArena
+# Python Basic to Advanced
 
-A practical Python learning workspace with small, runnable examples grouped by topic.
+A topic-based folder structure for learning Python from fundamentals through
+advanced concepts and practice projects. Lesson files are starter placeholders
+to fill in as you work through each topic.
 
-## Quick Start
+## Getting started
 
-Run the scientific calculator:
+Use Python 3.10 or newer. No third-party packages are required for the starter
+structure. Add optional packages to `requirements.txt` when a lesson needs them.
 
-```bash
-python3 exercises/advanced/scientific_calculator.py
-```
-
-Try `sqrt(144)`, `sin(pi / 2)`, or `2 ** 10`. Type `help` for supported operations and `quit` to exit.
-
-Run the sales analysis demo:
+Run a lesson from the repository root:
 
 ```bash
-python3 exercises/data_analysis/sales_analysis.py
+python3 01_basics/01_introduction_and_setup.py
 ```
 
-The report is written to `data/output/sales_report.json`.
+## Topics
 
-## Learning Map
-
-| Topic | Files |
-| --- | --- |
-| Conditions, loops, functions | `exercises/basics/conditionals.py`, `loops.py`, `functions.py` |
-| Lists, tuples, sets, dictionaries | `exercises/basics/lists.py`, `tuples.py`, `sets.py`, `dictionaries.py` |
-| Recursion | `exercises/basics/recursion.py` |
-| Object-oriented programming | `exercises/oop/classes.py` |
-| File input and output | `exercises/file_io/text_files.py` |
-| Advanced math and programming | `exercises/advanced/` |
-| Data analysis | `exercises/data_analysis/` |
-| Data cleaning | `data_cleaning/` |
-| Python questions and answers | `questions/` |
-
-Run an individual exercise from the repository root, for example:
-
-```bash
-python3 exercises/basics/loops.py
-```
-
-## Data Cleaning
-
-The standard-library example needs no installation:
-
-```bash
-python3 data_cleaning/standard_library.py
-```
-
-Pandas and Excel examples use optional dependencies:
-
-```bash
-python3 -m pip install -r requirements.txt
-python3 data_cleaning/pandas_example.py
-python3 data_cleaning/file_cleaner.py data/examples/cleaned_customers.xlsx
-```
-
-Sample datasets are kept in `data/examples/`. Generated files go to `data/output/`.
-
-## Docker
-
-```bash
-docker build -t pypracticearena .
-docker run -it --rm pypracticearena
-```
-
-## Development
-
-Compile all maintained Python examples with:
-
-```bash
-python3 -m compileall -q exercises data_cleaning questions
-```
-
-GitHub Actions runs this syntax check on Python 3.10, 3.11, and 3.12.
+1. `01_basics/` — syntax, values, input, control flow, and strings.
+2. `02_data_structures/` — lists, tuples, sets, dictionaries, and comprehensions.
+3. `03_functions/` — functions, arguments, recursion, scope, and closures.
+4. `04_file_and_error_handling/` — files, CSV/JSON, paths, and exceptions.
+5. `05_oop/` — classes, inheritance, methods, and object-oriented design.
+6. `06_intermediate/` — modules, standard library, tooling, and useful modules.
+7. `07_advanced/` — decorators, iteration, concurrency, typing, and testing.
+8. `08_best_practices/` — clean code, documentation, debugging, and design.
+9. `09_projects/` — small projects to apply the topics.
