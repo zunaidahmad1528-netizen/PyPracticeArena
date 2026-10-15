@@ -1,0 +1,2 @@
+Hello, Python file I/O!
+This file was created by the exercise.

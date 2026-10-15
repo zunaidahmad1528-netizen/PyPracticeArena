@@ -7,7 +7,7 @@ A practical Python learning workspace with small, runnable examples grouped by t
 Run the scientific calculator:
 
 ```bash
-python3 projects/scientific_calculator.py
+python3 exercises/advanced/scientific_calculator.py
 ```
 
 Try `sqrt(144)`, `sin(pi / 2)`, or `2 ** 10`. Type `help` for supported operations and `quit` to exit.
@@ -15,7 +15,7 @@ Try `sqrt(144)`, `sin(pi / 2)`, or `2 ** 10`. Type `help` for supported operatio
 Run the sales analysis demo:
 
 ```bash
-python3 projects/sales_analysis.py
+python3 exercises/data_analysis/sales_analysis.py
 ```
 
 The report is written to `data/output/sales_report.json`.
@@ -29,10 +29,10 @@ The report is written to `data/output/sales_report.json`.
 | Recursion | `exercises/basics/recursion.py` |
 | Object-oriented programming | `exercises/oop/classes.py` |
 | File input and output | `exercises/file_io/text_files.py` |
-| Advanced practice | `exercises/advanced/` |
+| Advanced math and programming | `exercises/advanced/` |
+| Data analysis | `exercises/data_analysis/` |
 | Data cleaning | `data_cleaning/` |
 | Python questions and answers | `questions/` |
-| Mini-projects | `projects/` |
 
 Run an individual exercise from the repository root, for example:
 
@@ -70,7 +70,7 @@ docker run -it --rm pypracticearena
 Compile all maintained Python examples with:
 
 ```bash
-python3 -m compileall -q exercises data_cleaning projects questions
+python3 -m compileall -q exercises data_cleaning questions
 ```
 
 GitHub Actions runs this syntax check on Python 3.10, 3.11, and 3.12.
