@@ -5,6 +5,7 @@ progressing from the basics to advanced topics. Work through the folders in
 order, write code every day, and use the project folder to put what you learn
 into practice.
 
+
 ## How to use this repository
 
 The numbered Python files are practice spaces. Add your own examples, exercises,
@@ -29,6 +30,7 @@ consistently:
 - **Code (15–30 minutes):** write examples and solve a small exercise.
 - **Reflect (5 minutes):** note what worked, what was confusing, and what to try
   next.
+
 
 If you miss a day, pick up where you left off. Understanding and regular
 practice matter more than rushing through every topic.
